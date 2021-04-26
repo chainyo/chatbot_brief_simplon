@@ -1,3 +1,4 @@
+![logo](logos/logo_isen.png) ![logo](logos/logo_simplon.png)<br>
 # Chatbot
 
 Salut
