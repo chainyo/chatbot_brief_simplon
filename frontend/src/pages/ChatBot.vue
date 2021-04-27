@@ -1,7 +1,15 @@
 <template>
-  <Header />
-  <ChatWindow />
-  <Credits />
+  <div class="layout">
+    <el-container>
+      <el-header>
+          <Header />
+      </el-header>
+      <el-main>
+          <ChatWindow />
+          <Credits />
+      </el-main>
+    </el-container>
+  </div>
 </template>
 
 <script>
