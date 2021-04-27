@@ -44,7 +44,7 @@ Après la définition des User Stories, le Product backlog suivant a été réal
 C'est donc le product backlog _initial_, réalisé suite au poker planning, qui est présenté ci-dessous.
 
 User Stories | Epic | Priorité | Estimation
-- |:-: |:-: | -:
+:- |:-: |:-: | -:
 je veux voir les messages s'afficher sur l'interface | Interface | 6 | 3
 je veux une réponse à ma question en appuyant sur entrée | Interface |7 | 3
 je veux une interface disponible à tous moments de la journée | Interface | 9| 8
