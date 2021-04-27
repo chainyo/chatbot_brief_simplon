@@ -2,7 +2,7 @@
 </template>
 
 <script>
-import ChatBot from './components/ChatBot.vue'
+import ChatBot from './pages/ChatBot.vue'
 
 export default {
   name: 'App',
