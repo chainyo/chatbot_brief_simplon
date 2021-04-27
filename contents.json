@@ -1,5 +1,5 @@
 {"intents": [
-        {"tag": "salutation",
+        {"tag": "salutations",
          "patterns": ["Salut", "Bonjour", "Il y a quelqu'un ?","Hey","Hola", "Hello", "bjr"],
          "responses": ["Bonjour ! Que puis-je faire pour vous ?", "Bonjour ! Comment puis-je vous aider ?"],
          "context": [""]
