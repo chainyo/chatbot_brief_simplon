@@ -17,7 +17,7 @@
             <el-input
               placeholder="Votre message..."
               v-model="input"
-              v-on:keyup.enter="sendMessage()"
+              v-on:keyup.enter="sendMessageUser()"
               clearable>
             </el-input>
           </el-col>
