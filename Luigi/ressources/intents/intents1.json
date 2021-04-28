@@ -1,0 +1,18 @@
+{"intents":[
+    {"tag": "salutation",
+    "patterns": ["Yo","Salut","Comment vas-tu?","il y a quelq'un?" ],
+    "responses":["Bonjour à vous","Content de vous voir","Bonjour comment puis-je vous aider?"]
+    },
+    {"tag":"aurevoir",
+    "patterns":["Bye","à plus tard","Aurevoir","Ravi d'avoir discuté avec toi salut","Adieu"],
+    "responses":["Content de vous avoir aidé","Ce fut un plaisir"]
+    },
+    {"tag":"aucune question",
+    "patterns": [""],
+    "responses":["Désolé je n'ai pas compris votre requête","Pourriez-vous être plus claire s'il vous plaît?","Désolé je ne suis pas sûre de vous avoir compris"]
+    },
+    {"tag":"curiosite",
+     "patterns":["Qui es-tu?","Pourquoi t'es là?","T'es qui?"],
+     "responses":["ça ne vous regarde pas","Mêlé vous de ce qui vous regarde fdp"]
+    }        ]
+}

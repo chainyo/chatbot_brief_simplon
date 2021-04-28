@@ -1,0 +1,83 @@
+{"intents": [
+    {"tag": "salutations",
+     "patterns": ["Salut", "Bonjour", "Il y a quelqu'un ?","Hey","Hola", "Hello", "bjr"],
+     "responses": ["Bonjour ! Que puis-je faire pour vous ?", "Bonjour ! Comment puis-je vous aider ?"],
+     "context": [""]
+    },
+    {"tag": "howareyou",
+     "patterns": ["Ca va ?", "La forme ?", "Quoi de neuf ?", "Salut, ça va ?", "Comment allez-vous ?"],
+     "responses": ["Bien, merci ! Que puis-je faire pour vous ?", "Très bien ! J'espère que vous aussi... Comment puis-je vous aider ?"],
+     "context": [""]
+    },
+    {"tag": "goodbye",
+     "patterns": ["Bye", "A plus", "Ciao", "Au revoir", "A bientôt"],
+     "responses": ["Au revoir !", "Bonne journée !", "A bientôt !"],
+     "context": [""]
+    },
+    {"tag": "thanks",
+     "patterns": ["Merci", "Ok merci", "super", "merci pour le coup de main"],
+     "responses": ["Il n'y a pas de quoi.", "Avec plaisir !", "Je suis content de vous avoir aidé"],
+     "context": [""]
+    },
+    {"tag": "noanswer",
+     "patterns": [],
+     "responses": ["Désolé, je n'ai pas compris."],
+     "context": [""]
+    },
+    {"tag":"school1",
+        "patterns":["Quel genre d'école est-ce ?","Qu'est-ce que l'école Microsoft-IA By Simplon ?", "Que proposez-vous ?", "Quelles sont les valeurs de l'école ?", "Quand a été créée l'école ?"],
+        "responses":["L’école Microsoft IA est une école qui a été créé en 2018 en partenariat avec Simplon. Elle a fêté ses 3 ans en avril 2021.\nLe Réseau des Fabriques Simplon.co compte en France et à l’international plus de 100 Fabriques inclusives qui partagent des valeurs, une méthode et le même objectif : l’insertion professionnelle de talents sur des métiers techniques du numérique."],
+        "context":[""]
+    },
+    {"tag":"school2",
+        "patterns":["Où se trouvent les écoles ?", "Combien d'écoles y-a-t'il ?", "Combien d'étudiants avez-vous ?", "Qui sont vos partenanires ?", "Combien de partenaires avec-vous ?"],
+        "responses":["Aujourd’hui, ce sont plus de 500 apprenants qui ont été formés, 24 écoles sur le territoire français réparties sur 9 régions, et 110 partenaires à nos côtés. "],
+        "context":[""]
+    },
+    {"tag":"program",
+    "patterns":["Quel est le contenu pédagogique ?","Quel est le programme ?","Que va-t-on apprendre ?","Que fait-on en cours ?"],
+    "responses":["Le contenu pédagogique est élaboré par des experts IA et développeurs Microsoft en partenariat avec Simplon, autour de 5 champs de compétences : \n - La préparation et le traitement des données,  \n - Les API cognitives, \n - Le développement IA,\n - L’interfaçage et la production, \n - Les « soft skills »."],
+    "context":[""]
+    },
+    {"tag":"evaluation",
+    "patterns":["Quelles sont les conditions à remplir pour obtenir le diplôme ?","Comment se passent les examens ?","Y'a t'il des examens ?","Comment est-on évalué ?","Est-ce qu'il y a des contrôles ?"],
+    "responses":["L'évaluation finale des compétences de l'apprenant est basée sur : \n - La réalisation d'un chef d'œuvre : projet de l'apprenant, attestant de la maîtrise de l'ensemble des compétences visées, \n - Certification professionnelle Microsoft (DP100) passée au terme de la période de formation intensive,  \n - Une soutenance devant un jury de professionnels."],
+    "context":[""]
+    },
+    {"tag":"admission1",
+    "patterns":["Comment se passent les admissions ?","Quel niveau d'étude faut-il pour être admis ?","Quels sont les prérequis ?","Que faut-il pour être admis ?","Que faut-il pour être admis ?", "Qui peut s'inscrire ? ", "Qui peut postuler ?", "Comment se passent les inscriptions ?"],
+    "responses":["La formation est ouverte à toute personne inscrite en tant que demandeur.se d’emploi. \n Il faut une très forte motivation, à prouver lors des entretiens ! Il faut avoir découvert le monde de la donnée soi-même (ex. plateformes d'apprentissage en ligne), une première expérience en programmation (connaissance d’un langage de programmation back-end), un niveau lycée en mathématiques, vouloir travailler en équipe, de la curiosité, de la créativité, une bonne expression à l’oral et à l’écrit, une représentation claire du métier… et bien sûr, l’envie de s’engager dans une formation intense !"],
+    "context":[""]
+    },
+    {"tag":"admission2",
+    "patterns":["Je suis actuellement en CDI, puis-je m'inscrire ?","Puis-je m'inscrire alors que je travaille ?", "Qui peut postuler ?"],
+    "responses":["Il est nécessaire d'être inscrit en tant que demandeur.se d’emploi pour pouvoir postuler."],
+    "context":[""]
+    },
+    {"tag":"interviews1",
+    "patterns":["Comment se passent les entretiens ?","Comment sont départagées les candidatures ?", "Qui sont les meilleurs candidats ?", "Qui a le plus de chances d'être admis ?", "Quel est le profil des candidats ?"],
+    "responses":[""],
+    "context":[""]
+    },
+    {"tag":"degree",
+    "patterns":["Quel diplôme obtient-on ?","La formation est-elle certifiante ?", "La formation est-elle diplômante ?", " Quel est le niveau d'étude en sortie de la formation ?", "Est-ce qu'on obtient une licence ?"],
+    "responses":["Le parcours délivre un titre à finalité professionnelle et une certification reconnus par l’État, ainsi qu’une certification Microsoft Azure :\n - Le titre à finalité professionnelle (certification RNCP) Développeur.euse en intelligence artificielle de niveau 6 (ancien niveau II), équivalent Bac+3 ou 4  RNCP34757, \n - Une certification Méthodes agiles de gestion et amorçage de projet RS2085 , \n - Une certification Microsoft Designing and Implementing a Data Science Solution on Azure – DP100"],
+    "context":[""]
+    },
+    {"tag":"credentials",
+    "patterns":["Les titres sont-ils reconnus ?","Les compétences sont-elles reconnues ?", "Les titres sont-ils inscrits au RNCP ?", " Quelle est la valeur du diplôme ?", "Quelle est la valeur des titres obtenus ?"],
+    "responses":["Le titre à finalité professionnelle RNCP34757 est publié au Répertoire national des certifications de France Compétences, et la certification RS2085 est publiée au Répertoire spécifique des certifications de France Compétences."],
+    "context":[""]
+    },
+    {"tag":"price",
+    "patterns":["Combien coûte la formation ?","Quel est le prix de la formation ?", "Combien ça coûte ?", "Comment peut-on financer sa formation ?", "Est-ce gratuit ?", "Est-ce que c'est cher ?"],
+    "responses":["La formation est totalement gratuite pour les bénéficiaires grâce aux entreprises partenaires financeurs de la formation et aux fonds de financement de la formation professionnelle. \nPour les financeurs de la formation professionnelle des demandeurs d'emploi la formation coûte 16€ à 25€ de l'heure selon la qualification visée et l'accompagnement à mobiliser."],
+    "context":[""]
+    },
+    {"tag":"contact",
+    "patterns":["Comment vous contacter ?","Comment vous envoyer un message ?", "Quel est votre numéro de téléphone ?", "Comment avoir de meilleures réponses à mes questions ?"],
+    "responses":["Vous pouvez nous envoyer un message via le lien suivant : https://simplon.co/contact.html"],
+    "context":[""]
+    }
+]
+}
