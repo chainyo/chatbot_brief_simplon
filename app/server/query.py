@@ -15,5 +15,5 @@ class DB :
     @classmethod
     async def find_answer(cls, tag):
         cls.connexion()
-        data = await cls.db.intents.find_one({"tag": tag}, {'_id': 0)
+        data = await cls.db.intents.find_one({"tag": tag}, {'_id': 0})
         return data
