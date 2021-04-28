@@ -83,8 +83,8 @@ class training ():
 
         #Je fit et save le modèle
         hist = model.fit(np.array(self.X_train), np.array(self.y_train), epochs=250, batch_size=2, verbose=1)
-        model.save('C:/Users/utilisateur/Documents/Chatbot_pour_l_ecole_Microsoft_IA_Brest/chatbot_brief_simplon/Luigi/model/chatbot_model.h5', hist)
-        tfjs.converters.save_keras_model(model, "C:/Users/utilisateur/Documents/Chatbot_pour_l_ecole_Microsoft_IA_Brest/chatbot_brief_simplon/Luigi/model/tfjsmodel")
+        model.save('C:/Users/Shadow/Documents/Chatbot_pour_l_ecole_Microsoft_IA_Brest/chatbot_brief_simplon/Luigi/model/chatbot_model.h5', hist)
+        tfjs.converters.save_keras_model(model, "C:/Users/Shadow/Documents/Chatbot_pour_l_ecole_Microsoft_IA_Brest/chatbot_brief_simplon/Luigi/model/tfjsmodel")
 
         print("model crée")
 
