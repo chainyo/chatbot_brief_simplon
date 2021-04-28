@@ -12,5 +12,5 @@ async def read_root():
 
 @app.get("/find_one", tags=['1document'])
 async def find_one(tag):
-    response = await DB.find_one(tag)
+    response = await DB.find_answer(tag)
     return response
