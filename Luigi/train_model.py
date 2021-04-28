@@ -51,7 +51,7 @@ class training ():
         #je mélange ensuite mon training et le convertie en array
         random.shuffle(self.training)
         self.training = np.array(self.training)
-        #print(training)
+        #print(self.training)
         #je splite ensuite mon train
         #print(self.training[:,0])    
         self.X_train = list(self.training[:,0])#correspond à mes patterns
