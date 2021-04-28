@@ -1,7 +1,0 @@
-daily 28.04
-
-model non fonctionel, il faudrait plus de questions
-api pas fonctionelle
-interface pas belle
-base de données
-
