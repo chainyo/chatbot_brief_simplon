@@ -3,7 +3,7 @@ from nltk.stem import WordNetLemmatizer
 import json
 import pickle
 
-intents_files = open("C:/Users/utilisateur/Documents/microsoft_ia/Devoirs/Chatbot_pour_l_ecole_Microsoft_IA_Brest/chatbot_brief_simplon/Luigi/ressources/intents/intents.json").read()
+intents_files = open("C:/Users/Shadow/Documents/Chatbot_pour_l_ecole_Microsoft_IA_Brest/chatbot_brief_simplon/Luigi/ressources/intents/intents.json").read()
 intents = json.loads(intents_files)
 lemmatizer = WordNetLemmatizer
 
@@ -76,14 +76,14 @@ class traitment_intents():
         list_name_save = ["classes","words","documents"]
         i = 0
         for element in list_elements:
-            with open(f'C:/Users/utilisateur/Documents/microsoft_ia/Devoirs/Chatbot_pour_l_ecole_Microsoft_IA_Brest/chatbot_brief_simplon/Luigi/ressources/obj/{list_name_save[i]}.pkl', 'wb') as f:
+            with open(f'C:/Users/Shadow/Documents/Chatbot_pour_l_ecole_Microsoft_IA_Brest/chatbot_brief_simplon/Luigi/ressources/obj/{list_name_save[i]}.pkl', 'wb') as f:
                         pickle.dump(element, f, pickle.HIGHEST_PROTOCOL)
             i += 1
         print("sauvegarde terminée")
 
     def read_file(file_name):
             
-            with open(f'C:/Users/utilisateur/Documents/microsoft_ia/Devoirs/Chatbot_pour_l_ecole_Microsoft_IA_Brest/chatbot_brief_simplon/Luigi/ressources/obj/{file_name}.pkl', 'rb') as f:
+            with open(f'C:/Users/Shadow/Documents/Chatbot_pour_l_ecole_Microsoft_IA_Brest/chatbot_brief_simplon/Luigi/ressources/obj/{file_name}.pkl', 'rb') as f:
                     return pickle.load(f)
 
 

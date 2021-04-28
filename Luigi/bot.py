@@ -69,8 +69,8 @@ class bot:
                 break
         return result
 
-result = bot().predict("où sont les écoles?")
-bot().get_reponse(result)
+# result = bot().predict("où sont les écoles?")
+# bot().get_reponse(result)
 
 
 
