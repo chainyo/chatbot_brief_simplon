@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from starlette.responses import RedirectResponse
+from fastapi.middleware.cors import CORSMiddleware
 from query import DB
 
 app = FastAPI(
@@ -7,6 +8,15 @@ app = FastAPI(
     description="Cette API est utilisé par notre Chatbot pour pouvoir communiquer.",
     version="1.0",
     openapi_url="/api/v1/openapi.json"
+)
+
+# Gestion des CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 @app.get("/", include_in_schema=False)
