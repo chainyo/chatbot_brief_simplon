@@ -92,14 +92,15 @@ je veux une interface disponible à tous moments de la journée | Interface | 3 
 Je veux qu'on s'adresse à moi différemment selon mon statut (étudiant ou partenaire) | Interface | 8 |En cours
 Je veux un modèle qui classifie les messages de mes utilisateurs | Modèle | 5 | En cours
 Je veux un modèle adapté aux données: diversité des classes pour répondre aux possibilités d'interactions | Modèle | 3 | En cours
-Je veux des endpoints adaptés au besoin du modèle et de l'interface | API |1 | En cours
+Je veux définir les endpoints (je veux une API) | API | 1 | 2
+Je veux des endpoints adaptés au besoin du modèle et de l'interface | API |1 | 2
 Je veux une API qui soit disponible 100% | API |1 | En cours
 Je veux une documentation pour mon API | API | 1 | En cours
 Je veux des tags dans mon corpus pour faciliter la classification| Corpus |  1| 1
 Je veux une banque de questions et de réponses | Corpus |  10 | 1
 Je veux que mon corpus soit stocké en base de données | Corpus |  3 | 1
 Je veux que mon corpus soit en français | Corpus | 1 | 1
-Je veux que mon modèle fonctionne sur Tensorflow.JS | Modèle | 3| En cours
+Je veux que mon modèle fonctionne sur Tensorflow.JS | Modèle | 3| 2
 
 
 
