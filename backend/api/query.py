@@ -1,8 +1,6 @@
 import os
-import motor.motor_tornado
 import motor.motor_asyncio
 from bson.objectid import ObjectId
-
 
 class DB :
 
@@ -10,7 +8,6 @@ class DB :
     def connexion(cls) :
         cls.client = motor.motor_asyncio.AsyncIOMotorClient("mongodb+srv://TJLL:M3G4H377ABot@chatbotcluster.zblke.mongodb.net/?retryWrites=true&w=majority")
         cls.db = cls.client['ChatDB']
-
 
     @classmethod
     async def find_answer(cls, tag):

@@ -1,4 +1,3 @@
-![logo](logos/logo_isen.png) ![logo](logos/logo_simplon.png)<br>
 # Chatbot
 
 ## 1. Organisation du travail
