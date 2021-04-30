@@ -3,6 +3,7 @@ from keras.models import Sequential
 from keras.layers import Dense,Activation,Dropout
 from keras.optimizers import SGD
 import random
+import pickle
 from nltk.stem import WordNetLemmatizer
 import tensorflowjs as tfjs
 import tensorflow as tf
@@ -31,6 +32,7 @@ def create_model(data_path):
     try:
         tfjs.converters.save_keras_model(model, "l_test/tfjsmodel")
         print("model crée")
+        pickle.dump("l_test/bow", bag_of_words)
     except:
         print("pb_enregistrement")
 
