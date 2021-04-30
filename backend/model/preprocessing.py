@@ -32,7 +32,7 @@ class Preprocessing:
             self.sentences_words = nltk.word_tokenize(sentence)
             for word in self.sentences_words:
                 print(word)
-                self.new_sentence.extend(self.preprocess_word(self,word))
+                self.new_sentence.extend(self.preprocess_word(word))
             #print(self.sentences_words)
             #Je réduis chaque mot à sa forme de base
             self.final_sentences_words = [lemmatizer().lemmatize(word.lower()) for word in self.new_sentence]
