@@ -44,11 +44,11 @@ export default {
   },
   methods: {
     sendMessageUser () {
-      this.messages.push({content:this.input, class:'user-message', id:this.allMessages.length})
+      this.allMessages.push({content:this.input, class:'user-message', id:this.allMessages.length})
       this.input = null
     },
     sendMessageBot (answer) {
-      this.messages.push({content:answer, class:'bot-message', id:this.allMessages.length})
+      this.allMessages.push({content:answer, class:'bot-message', id:this.allMessages.length})
     }
   },
   computed: {
