@@ -80,7 +80,6 @@ class traitment_intents():
        #Je lemmatise met en minuscule chaque mot et supprime toutes les duplications s'il en ya en remplaçant ces dernières par un mot synonyme
        self.words_list = [lemmatizer().lemmatize(word) for word in self.words_list]
        self.words_list = sorted(list(set(self.words_list)))
-       #print('*'*30)
        print(self.words_list,len(self.words_list))
        #Je trie les classes 
        self.classes = sorted(list(set(self.classes)))
