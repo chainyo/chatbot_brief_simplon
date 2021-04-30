@@ -1,4 +1,4 @@
-from backend.model.preprocessing import Preprocessing
+from app.model.preprocessing import Preprocessing
 
 class Stemmer():
 

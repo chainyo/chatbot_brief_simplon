@@ -6,7 +6,7 @@ import random
 from nltk.stem import WordNetLemmatizer
 import tensorflowjs as tfjs
 import tensorflow as tf
-from traitment_corpus import traitment_intents
+from app.model.traitment_corpus import traitment_intents
 
 class training ():
 

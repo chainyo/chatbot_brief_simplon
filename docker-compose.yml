@@ -1,4 +1,4 @@
-version: "3.8"
+version: "3.3"
 
 services:
     api:
@@ -10,8 +10,7 @@ services:
         container_name: api
         ports:
             - 8081:8081
-        volumes:
-            - data:/app/data
+
     vue:
         image: vue:1.0
         build:
@@ -21,5 +20,3 @@ services:
         container_name: vue
         ports:
             - 8080:8080
-        volumes:
-            - data:/app/data

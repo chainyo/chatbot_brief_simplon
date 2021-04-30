@@ -4,7 +4,7 @@ import nltk
 from nltk.stem import  WordNetLemmatizer
 import numpy as np
 import random
-from traitment_corpus import traitment_intents
+from app.model.traitment_corpus import traitment_intents
 from nltk.corpus import stopwords
 from nltk.stem.snowball import SnowballStemmer
 stemmer = SnowballStemmer("french")

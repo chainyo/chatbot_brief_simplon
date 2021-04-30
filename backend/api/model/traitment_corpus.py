@@ -1,10 +1,10 @@
 import nltk
+nltk.download('stopwords')
 from nltk.stem import WordNetLemmatizer
 import json
 import pickle
 import re
 from nltk.corpus import stopwords
-import spacy
 from nltk.stem.snowball import SnowballStemmer
 #import nltk   #if u have not dowload 
 #nltk.download()
@@ -117,8 +117,3 @@ class traitment_intents():
 # print(classes)
 # documents = traitment_intents().read_file("documents")
 # print(documents)
-
-
-
-
-
