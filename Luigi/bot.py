@@ -13,8 +13,8 @@ class bot:
         self.lemmatizer = WordNetLemmatizer
         self.classes = traitment_intents.read_file("classes")
         self.words_list = traitment_intents.read_file("words")
-        self.intents_files = json.loads(open("C:/Users/utilisateur/Documents/microsoft_ia/Devoirs/Chatbot_pour_l_ecole_Microsoft_IA_Brest/chatbot_brief_simplon/Luigi/ressources/intents/intents.json").read())
-        self.model = load_model('C:/Users/utilisateur/Documents/microsoft_ia/Devoirs/Chatbot_pour_l_ecole_Microsoft_IA_Brest/chatbot_brief_simplon/Luigi/model/chatbot_model.h5')
+        self.intents_files = json.loads(open("C:/Users/Shadow/Documents/Chatbot_pour_l_ecole_Microsoft_IA_Brest//chatbot_brief_simplon/Luigi/ressources/intents/intents.json").read())
+        self.model = load_model('C:/Users/utilisateur/Documents/Chatbot_pour_l_ecole_Microsoft_IA_Brest/chatbot_brief_simplon/Luigi/model/chatbot_model.h5')
         
     
     def clean_sentences(self,sentence):
@@ -69,8 +69,8 @@ class bot:
                 break
         return result
 
-result = bot().predict("où sont les écoles?")
-bot().get_reponse(result)
+# result = bot().predict("où sont les écoles?")
+# bot().get_reponse(result)
 
 
 

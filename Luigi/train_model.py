@@ -3,8 +3,10 @@ from keras.models import Sequential
 from keras.layers import Dense,Activation,Dropout
 from keras.optimizers import SGD
 import random
+#import nltk   #if u have not dowload 
+#nltk.download()
 from nltk.stem import WordNetLemmatizer
-from tensorflow.python.keras.saving.save import load_model
+import tensorflowjs as tfjs
 from traitment_corpus import traitment_intents
 
 class training ():
@@ -81,11 +83,12 @@ class training ():
 
         #Je fit et save le modèle
         hist = model.fit(np.array(self.X_train), np.array(self.y_train), epochs=250, batch_size=2, verbose=1)
-        model.save('C:/Users/utilisateur/Documents/microsoft_ia/Devoirs/Chatbot_pour_l_ecole_Microsoft_IA_Brest/chatbot_brief_simplon/Luigi/model/chatbot_model.h5', hist)
+        model.save('C:/Users/Shadow/Documents/Chatbot_pour_l_ecole_Microsoft_IA_Brest/chatbot_brief_simplon/Luigi/model/chatbot_model.h5', hist)
+        tfjs.converters.save_keras_model(model, "C:/Users/Shadow/Documents/Chatbot_pour_l_ecole_Microsoft_IA_Brest/chatbot_brief_simplon/Luigi/model/tfjsmodel")
 
         print("model crée")
 
     
 
 
-#training().create_model()  
+training().create_model()  
