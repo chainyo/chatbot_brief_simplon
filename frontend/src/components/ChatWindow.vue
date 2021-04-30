@@ -31,7 +31,8 @@
 
 <script>
 import MessageLayout from '@/components/MessageLayout'
-import * as tf from '@tensorflow/tfjs';
+import * as tf from '@tensorflow/tfjs'
+import axios from 'axios'
 
 export default {
   components: {
