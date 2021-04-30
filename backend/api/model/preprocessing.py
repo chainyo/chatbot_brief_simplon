@@ -10,7 +10,8 @@ special_characters = r'[^A-Za-z0-9àéèùêôûâïäëç]+'
 
 class Preprocessing:
 
-    def preprocess_word(self,word):
+    @classmethod
+    def preprocess_word(cls, word):
 
             if word == "'Aujourd','hui'":
                 word = word.lower()
@@ -18,24 +19,21 @@ class Preprocessing:
                 word = word.lower().replace("'"," ")
             word = re.sub(special_characters, ' ' ,word)
 
-            filtered_sentence = []
-            word_tokens = word.split(" ")
+            cls.filtered_sentence = []
+            cls.word_tokens = word.split(" ")
 
-            for w in word_tokens:
+            for w in cls.word_tokens:
                 if w not in stop_words  and w != "":
-                    filtered_sentence.append(w)
-            return filtered_sentence
+                    cls.filtered_sentence.append(w)
+            return cls.filtered_sentence
 
-    def clean_sentences(self,sentence):
+    def clean_sentences(cls, sentence):
 
-            self.new_sentence = []
+            cls.new_sentence = []
             #je tokenise le pattern et split les mots en array
-            self.sentences_words = nltk.word_tokenize(sentence)
-            for word in self.sentences_words:
-                print(word)
-                self.new_sentence.extend(self.preprocess_word(word))
-            #print(self.sentences_words)
+            cls.sentences_words = nltk.word_tokenize(sentence)
+            for word in cls.sentences_words:
+                cls.new_sentence.extend(cls.preprocess_word(word))
             #Je réduis chaque mot à sa forme de base
-            self.final_sentences_words = [lemmatizer().lemmatize(word.lower()) for word in self.new_sentence]
-            print(self.final_sentences_words)
-            return self.final_sentences_words
+            cls.final_sentences_words = [lemmatizer().lemmatize(word.lower()) for word in cls.new_sentence]
+            return cls.final_sentences_words
