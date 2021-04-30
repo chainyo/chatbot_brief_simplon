@@ -4,7 +4,8 @@ from keras.layers import Dense,Activation,Dropout
 from keras.optimizers import SGD
 import random
 from nltk.stem import WordNetLemmatizer
-from tensorflow.python.keras.saving.save import load_model
+import tensorflowjs as tfjs
+import tensorflow as tf
 from traitment_corpus import traitment_intents
 
 class training ():
@@ -12,9 +13,9 @@ class training ():
     def __init__(self):
         
 
-            self.classes = traitment_intents.read_file("classes")
-            self.words_list = traitment_intents.read_file("words")
-            self.documents = traitment_intents.read_file("documents")
+            self.classes = traitment_intents().read_file("classes")
+            self.words_list = traitment_intents().read_file("words")
+            self.documents = traitment_intents().read_file("documents")
             self.lemmatizer = WordNetLemmatizer
             self.training = []#on s'en servira pour le training
             self.output_empty = [0]*len(self.classes)#je crèe un array vide pour la sortie
@@ -30,15 +31,15 @@ class training ():
             
             #ici ça sera la liste des mots "tokeneisés" pour les patterns
             self.pattern_words = doc[0]
-            #print(pattern_words)
-            
+               
             #le fait de lemmatiser chaque mot créer un mot de base pour tenter de représenter un mot apparenté
-            self.pattern_words = [self.lemmatizer().lemmatize(word.lower()) for word in self.pattern_words]
+            # self.pattern_words = [self.lemmatizer().lemmatize(word.lower()) for word in self.pattern_words]
             
             #je crèe mon array de sac de mots avec 1, si un mot est trouvé dans le pattern en cours
+            print(self.pattern_words)
             for word in self.words_list:
                 self.bag.append(1) if word in self.pattern_words else self.bag.append(0)
-
+                #print(word,self.bag)
             #la sortie est à 0 pour chaque classe/tag et 1 pour la classe en cours pour chaque pattern
             output_row = list(self.output_empty)
             # print(output_row)
@@ -58,7 +59,8 @@ class training ():
         #print(self.training[:,1])
         self.y_train = list(self.training[:,1])#correspond à mes intents
         print("Dataset d'entraînement crée")
-        
+        print(output_row)
+        print(len(self.X_train[0]),len(self.y_train[0]))
         return self.X_train,self.y_train
 
 
@@ -66,7 +68,8 @@ class training ():
     def create_model(self):
 
         self.X_train,self.y_train = training().create_data_training()
-        #je crèe mon model avec  - 3 layers. le 1er avec 128 neurons, le second avec 64 neurons et le  3ème layer a un nombre de neurons
+        
+        #je crèe mon model avec  - 3 layers. le 1er avec 256 neurons, le second avec 128 neurons et le  3ème layer a un nombre de neurons
         # égale au nombre d'intents à prédire 
         model = Sequential()
         model.add(Dense(256, input_shape=(len(self.X_train[0]),), activation='relu'))
@@ -80,12 +83,17 @@ class training ():
         model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 
         #Je fit et save le modèle
-        hist = model.fit(np.array(self.X_train), np.array(self.y_train), epochs=250, batch_size=2, verbose=1)
-        model.save('C:/Users/utilisateur/Documents/microsoft_ia/Devoirs/Chatbot_pour_l_ecole_Microsoft_IA_Brest/chatbot_brief_simplon/Luigi/model/chatbot_model.h5', hist)
+        # self.X_train = tf.data.Dataset.from_tensor_slices(self.X_train)
+        # self.y_train = tf.data.Dataset.from_tensor_slices(self.y_train)
+        hist = model.fit(np.array(self.X_train), np.array(self.y_train), epochs=500, batch_size=5, verbose=1)
+        model.save('C:/Users/Shadow/Documents/Chatbot_pour_l_ecole_Microsoft_IA_Brest/chatbot_brief_simplon/Luigi/model/chatbot_model.h5', hist)
+        tfjs.converters.save_keras_model(model, "C:/Users/Shadow/Documents/Chatbot_pour_l_ecole_Microsoft_IA_Brest/chatbot_brief_simplon/Luigi/model/tfjsmodel")
 
         print("model crée")
 
+
+
     
 
-
+#training().create_data_training()
 #training().create_model()  

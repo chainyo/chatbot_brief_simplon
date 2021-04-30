@@ -5,7 +5,7 @@
      "context": [""]
     },
     {"tag": "howareyou",
-     "patterns": ["Ca va ?", "La forme ?", "Quoi de neuf ?", "Salut, ça va ?", "Comment allez-vous ?"],
+     "patterns": ["ça va ?", "La forme ?", "Quoi de neuf ?", "Salut, ça va ?", "Comment allez-vous ?"],
      "responses": ["Bien, merci ! Que puis-je faire pour vous ?", "Très bien ! J'espère que vous aussi... Comment puis-je vous aider ?"],
      "context": [""]
     },
@@ -75,7 +75,7 @@
     "context":[""]
     },
     {"tag":"contact",
-    "patterns":["Comment vous contacter ?","Comment vous envoyer un message ?", "Quel est votre numéro de téléphone ?", "Comment avoir de meilleures réponses à mes questions ?"],
+    "patterns":["Comment vous contacter ?","Comment vous envoyer un message ?", "Quel est votre numéro de téléphone ?", "Comment avoir de meilleures réponses à mes questions ?","école"],
     "responses":["Vous pouvez nous envoyer un message via le lien suivant : https://simplon.co/contact.html"],
     "context":[""]
     }
