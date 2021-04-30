@@ -68,9 +68,9 @@ export default {
       console.log(this.predictedValue);
     },
     predictValue(input) {
-      const tfarray = tf.tensor2d(input, [1, input.length]); // preprocessing
-      const prediction = this.model.predict(tfarray); // prediction
-      return prediction.get(0, 0); // renvoi pred
+      const preprocessing = axios.get(`http://localhost:8080/api/v1/stemming?${input}`)
+      const prediction = this.model.predict(preprocessing.data);
+      return prediction
     }
   },
   computed: {
