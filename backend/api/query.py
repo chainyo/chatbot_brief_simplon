@@ -1,6 +1,4 @@
-import os
 import motor.motor_asyncio
-from bson.objectid import ObjectId
 
 class DB :
 

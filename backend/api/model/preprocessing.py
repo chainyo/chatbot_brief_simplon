@@ -13,7 +13,7 @@ class Preprocessing:
     @classmethod
     def preprocess_word(cls, word):
 
-            if word == "'Aujourd','hui'":
+            if word == "Aujourd'hui":
                 word = word.lower()
             else:
                 word = word.lower().replace("'"," ")
@@ -27,13 +27,13 @@ class Preprocessing:
                     cls.filtered_sentence.append(w)
             return cls.filtered_sentence
 
+    @classmethod
     def clean_sentences(cls, sentence):
 
             cls.new_sentence = []
-            #je tokenise le pattern et split les mots en array
+
             cls.sentences_words = nltk.word_tokenize(sentence)
             for word in cls.sentences_words:
                 cls.new_sentence.extend(cls.preprocess_word(word))
-            #Je réduis chaque mot à sa forme de base
             cls.final_sentences_words = [lemmatizer().lemmatize(word.lower()) for word in cls.new_sentence]
             return cls.final_sentences_words
