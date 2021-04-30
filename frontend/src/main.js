@@ -10,3 +10,4 @@ const chatbotApp = createApp(App)
 chatbotApp.use(router)
 chatbotApp.use(ElementPlus)
 chatbotApp.mount('#app')
+
