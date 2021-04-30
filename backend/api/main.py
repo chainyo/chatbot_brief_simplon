@@ -1,7 +1,9 @@
 from fastapi import FastAPI
 from starlette.responses import RedirectResponse
 from fastapi.middleware.cors import CORSMiddleware
+
 from query import DB
+from stemmer import Stemmer
 
 app = FastAPI(
     title="API ChatBot Brief Simplon",
@@ -27,3 +29,7 @@ async def home():
 async def find_one(tag):
     response = await DB.find_answer(tag)
     return response
+
+@app.get("/api/v1/stemming", tags=['Preprocessing'])
+async def get_stemming(input):
+    return {'data': Stemmer.get_stemming(input)}

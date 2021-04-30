@@ -31,6 +31,7 @@
 
 <script>
 import MessageLayout from '@/components/MessageLayout'
+import * as tf from '@tensorflow/tfjs';
 
 export default {
   components: {
@@ -39,8 +40,20 @@ export default {
   data () {
     return {
       input: null,
-      allMessages: []
+      allMessages: [],
+      botAnswer: null,
+      predictedTag: null,
     }
+  },
+  mounted () {
+    let that = this;
+
+    async function loadModel() {
+      that.model = await tf.loadLayersModel('@/model.json');
+      that.modelReady = true;
+      that.predictedValue = 'Ready for making predictions';
+    }
+    loadModel();
   },
   methods: {
     sendMessageUser () {
@@ -49,6 +62,15 @@ export default {
     },
     sendMessageBot (answer) {
       this.allMessages.push({content:answer, class:'bot-message', id:this.allMessages.length})
+    },
+    predict() {
+      this.predictedTag = this.predictValue([this.input]);
+      console.log(this.predictedValue);
+    },
+    predictValue(input) {
+      const tfarray = tf.tensor2d(input, [1, input.length]); // preprocessing
+      const prediction = this.model.predict(tfarray); // prediction
+      return prediction.get(0, 0); // renvoi pred
     }
   },
   computed: {

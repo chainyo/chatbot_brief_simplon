@@ -3,13 +3,11 @@ from nltk.stem import WordNetLemmatizer
 import re
 from nltk.corpus import stopwords
 
-
-
 lemmatizer = WordNetLemmatizer
 stop_words = set(stopwords.words('french')) 
 special_characters = r'[^A-Za-z0-9àéèùêôûâïäëç]+'
 
-class preprocessing:
+class Preprocessing:
 
     def preprocess_word(self,word):
 
@@ -34,11 +32,9 @@ class preprocessing:
             self.sentences_words = nltk.word_tokenize(sentence)
             for word in self.sentences_words:
                 print(word)
-                self.new_sentence.extend(preprocessing.preprocess_word(self,word))
+                self.new_sentence.extend(self.preprocess_word(self,word))
             #print(self.sentences_words)
             #Je réduis chaque mot à sa forme de base
             self.final_sentences_words = [lemmatizer().lemmatize(word.lower()) for word in self.new_sentence]
             print(self.final_sentences_words)
             return self.final_sentences_words
-
-preprocessing().clean_sentences("Bonjour ça va?")
