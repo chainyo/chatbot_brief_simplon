@@ -9,13 +9,13 @@ from nltk.stem.snowball import SnowballStemmer
 #import nltk   #if u have not dowload 
 #nltk.download()
 
-intents_files = open("C:/Users/Shadow/Documents/Chatbot_pour_l_ecole_Microsoft_IA_Brest/chatbot_brief_simplon/Luigi/ressources/intents/intents.json",encoding='utf-8').read()
+intents_files = open("backend/app/model/ressources/intents/intents.json",encoding='utf-8').read()
 intents = json.loads(intents_files)
 lemmatizer = WordNetLemmatizer
 stop_words = set(stopwords.words('french')) 
 sent_tokenize = nltk.data.load('tokenizers/punkt/french.pickle')
 special_characters = r'[^A-Za-z0-9àéèùêôûâïäëç]+'
-nlp = spacy.load('fr_core_news_md')#J'obtiens de moins bons résultats avec la méthode de stemming words
+#nlp = spacy.load('fr_core_news_md')#J'obtiens de moins bons résultats avec la méthode de stemming words
 stemmer = SnowballStemmer("french")
 
 class traitment_intents():
@@ -29,7 +29,7 @@ class traitment_intents():
     
     def preprocess_word(self,word):
         
-        if word == "'Aujourd','hui'":
+        if word == "Aujourd'hui":
             word = word.lower()
         else:
             word = word.lower().replace("'"," ")
@@ -98,15 +98,15 @@ class traitment_intents():
         list_name_save = ["classes","words","documents"]
         i = 0
         for element in list_elements:
-            with open(f'C:/Users/Shadow/Documents/Chatbot_pour_l_ecole_Microsoft_IA_Brest/chatbot_brief_simplon/Luigi/ressources/obj/{list_name_save[i]}.pkl', 'wb') as f:
+            with open(f'backend/app/model/ressources/obj/{list_name_save[i]}.pkl', 'wb') as f:
                         pickle.dump(element, f, pickle.HIGHEST_PROTOCOL)
             i += 1
         print("sauvegarde terminée")
 
     def read_file(self,file_name):
-            
-            with open(f'C:/Users/Shadow/Documents/Chatbot_pour_l_ecole_Microsoft_IA_Brest/chatbot_brief_simplon/Luigi/ressources/obj/{file_name}.pkl', 'rb') as f:
-                    return pickle.load(f)
+        with open(f'backend/app/model/ressources/obj/{file_name}.pkl', 'rb') as f:
+            file = pickle.load(f)
+        return file
                 
 #traitment_intents().tokenize()
 #traitment_intents().lemmatisation()
