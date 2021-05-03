@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from starlette.responses import RedirectResponse
 from fastapi.middleware.cors import CORSMiddleware
+from json import load
 
 from app.query import DB
 from app.model.preprocessing import Preprocessing
@@ -32,7 +33,10 @@ async def find_one(tag):
 
 @app.get("/api/v1/stemming", tags=['Preprocessing'])
 async def get_stemming(input):
-    clean = Preprocessing.clean_sentences(input)
-    bag = Preprocessing.bag_of_words(clean)
-    return {'data': bag}
-    
+    return {'data': Preprocessing.bag_of_words(input)}
+
+@app.get("/api/v1/model", tags=['Model'])
+async def get_model():
+    with open(f"./app/model/tfjsmodel/model.json") as f:
+        model = load(f)
+    return model

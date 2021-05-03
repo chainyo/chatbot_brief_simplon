@@ -2,11 +2,11 @@ import json
 import nltk
 import pickle
 import re
+import numpy as np
 
 from nltk.corpus import stopwords
 from nltk.stem import  WordNetLemmatizer
 
-    
 class Preprocessing():
     
     @classmethod
@@ -42,20 +42,20 @@ class Preprocessing():
     #Cette fonction va retourner un sac de mot sous forme d'array(0 ou 1 pour les mots existant dans la phrase)
     @classmethod
     def bag_of_words(cls, sentence):
-        cls.words_list = read_file("words")
+        cls.words_list = cls.read_file("words")
         #Je tokenise les patterns
         cls.sentences_words = cls.clean_sentences(sentence)
         #sac de mots matrice de vocabulaire
-        bag = [0]*len(words_list)
-        for sentence in self.sentences_words:
+        cls.bag = [0]*len(cls.words_list)
+        for s in cls.sentences_words:
             for i, words in enumerate(cls.words_list):
-                if words == sentence:
+                if words == s:
                     #j'assigne 1 si le mot est dans le vocabulaire
-                    bag[i] = 1
-        return(np.array(bag))
+                    cls.bag[i] = 1
+        return cls.bag
 
     @classmethod
-    def read_file(file_name):
+    def read_file(cls, file_name):
         with open(f'./app/model/ressources/obj/{file_name}.pkl', 'rb') as f:
             return pickle.load(f)
 

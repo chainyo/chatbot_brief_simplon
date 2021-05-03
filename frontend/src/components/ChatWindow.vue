@@ -46,12 +46,9 @@ export default {
     }
   },
   mounted () {
-
     async function loadModel() {
       const tf = require("@tensorflow/tfjs");
-      const tfn = require("@tensorflow/tfjs-node");
-      const handler = tfn.io.fileSystem("@/tfjsmodel/model.json");
-      const model = await tf.loadLayersModel(handler);
+      const model = await tf.loadLayersModel('http://localhost:8081/api/v1/model');
       console.log("Model loaded")
       console.log(model.summary)
     }
@@ -62,14 +59,11 @@ export default {
       const storedInput = this.input
       this.allMessages.push({content:this.input, class:'user-message', id:this.allMessages.length})
       this.input = null
-      this.predictedTag = this.predict(storedInput)
-      console.log(prediction)
+      this.predictedTag = this.predictValue(storedInput)
+      console.log(this.predictedTag)
     },
     sendMessageBot (answer) {
       this.allMessages.push({content:answer, class:'bot-message', id:this.allMessages.length})
-    },
-    predict(input) {
-      return this.predictValue(input);
     },
     predictValue(input) {
       const preprocessing = axios.get(`http://api:8081/api/v1/stemming?${input}`)
