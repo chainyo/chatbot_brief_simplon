@@ -3,6 +3,7 @@ from starlette.responses import RedirectResponse
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.query import DB
+from app.model.preprocessing import Preprocessing
 
 app = FastAPI(
     title="API ChatBot Brief Simplon",
@@ -31,4 +32,4 @@ async def find_one(tag):
 
 @app.get("/api/v1/stemming", tags=['Preprocessing'])
 async def get_stemming(input):
-    return {'data': Stemmer.get_stemming(input)}
+    return {'data': Preprocessing.clean_sentences(input)}

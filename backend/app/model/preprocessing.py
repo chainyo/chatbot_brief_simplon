@@ -1,7 +1,6 @@
 import nltk
 from nltk.stem import WordNetLemmatizer
 import re
-nltk.download('stopwords')
 from nltk.corpus import stopwords
 
 lemmatizer = WordNetLemmatizer
@@ -30,10 +29,10 @@ class Preprocessing:
     @classmethod
     def clean_sentences(cls, sentence):
 
-            cls.new_sentence = []
+        cls.new_sentence = []
 
-            cls.sentences_words = nltk.word_tokenize(sentence)
-            for word in cls.sentences_words:
-                cls.new_sentence.extend(cls.preprocess_word(word))
-            cls.final_sentences_words = [lemmatizer().lemmatize(word.lower()) for word in cls.new_sentence]
-            return cls.final_sentences_words
+        cls.sentences_words = nltk.word_tokenize(sentence)
+        for word in cls.sentences_words:
+            cls.new_sentence.extend(cls.preprocess_word(word))
+        cls.final_sentences_words = [lemmatizer().lemmatize(word.lower()) for word in cls.new_sentence]
+        return cls.final_sentences_words
