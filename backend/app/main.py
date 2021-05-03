@@ -3,7 +3,6 @@ from starlette.responses import RedirectResponse
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.query import DB
-from app.stemmer import Stemmer
 
 app = FastAPI(
     title="API ChatBot Brief Simplon",

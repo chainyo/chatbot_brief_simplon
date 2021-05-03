@@ -1,8 +1,6 @@
-fastapi==0.63.0
-uvicorn==0.13.4
-motor==2.2.0
-dnspython3==1.15.0
+fastapi
+uvicorn
+motor
+dnspython
 numpy
-tensorflow
-keras
 nltk
