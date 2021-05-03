@@ -1,6 +1,7 @@
 from fastapi import FastAPI
-from starlette.responses import RedirectResponse
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
+from starlette.responses import RedirectResponse
 from json import load
 
 from app.query import DB
@@ -40,3 +41,7 @@ async def get_model():
     with open(f"./app/model/tfjsmodel/model.json") as f:
         model = load(f)
     return model
+
+@app.get("/api/v1/group1-shard1of1.bin", include_in_schema=False)
+async def get_shards():
+    return FileResponse(path="/app/model/tfjsmodel/group1-shard1of1.bin")
