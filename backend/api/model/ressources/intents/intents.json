@@ -1,31 +1,31 @@
 {"intents": [
     {"tag": "salutations",
-     "patterns": ["Salut", "Bonjour", "Il y a quelqu'un ?","Hey","Hola", "Hello", "bjr"],
-     "responses": ["Bonjour ! Que puis-je faire pour vous ?", "Bonjour ! Comment puis-je vous aider ?"],
-     "context": [""]
+    "patterns": ["Salut", "Bonjour", "Il y a quelqu'un ?","Hey","Hola", "Hello", "bjr"],
+    "responses": ["Bonjour ! Que puis-je faire pour vous ?", "Bonjour ! Comment puis-je vous aider ?"],
+    "context": [""]
     },
     {"tag": "howareyou",
-     "patterns": ["ça va ?", "La forme ?", "Quoi de neuf ?", "Salut, ça va ?", "Comment allez-vous ?"],
-     "responses": ["Bien, merci ! Que puis-je faire pour vous ?", "Très bien ! J'espère que vous aussi... Comment puis-je vous aider ?"],
-     "context": [""]
+    "patterns": ["ça va ?", "La forme ?", "Quoi de neuf ?", "Salut, ça va ?", "Comment allez-vous ?"],
+    "responses": ["Bien, merci ! Que puis-je faire pour vous ?", "Très bien ! J'espère que vous aussi... Comment puis-je vous aider ?"],
+    "context": [""]
     },
     {"tag": "goodbye",
-     "patterns": ["Bye", "A plus", "Ciao", "Au revoir", "A bientôt"],
-     "responses": ["Au revoir !", "Bonne journée !", "A bientôt !"],
-     "context": [""]
+    "patterns": ["Bye", "A plus", "Ciao", "Au revoir", "A bientôt"],
+    "responses": ["Au revoir !", "Bonne journée !", "A bientôt !"],
+    "context": [""]
     },
     {"tag": "thanks",
-     "patterns": ["Merci", "Ok merci", "super", "merci pour le coup de main"],
-     "responses": ["Il n'y a pas de quoi.", "Avec plaisir !", "Je suis content de vous avoir aidé"],
-     "context": [""]
+    "patterns": ["Merci", "Ok merci", "super", "merci pour le coup de main"],
+    "responses": ["Il n'y a pas de quoi.", "Avec plaisir !", "Je suis content de vous avoir aidé"],
+    "context": [""]
     },
     {"tag": "noanswer",
-     "patterns": [],
-     "responses": ["Désolé, je n'ai pas compris."],
-     "context": [""]
+    "patterns": [],
+    "responses": ["Désolé, je n'ai pas compris."],
+    "context": [""]
     },
-    {"tag":"school1",
-        "patterns":["Quel genre d'école est-ce ?","Qu'est-ce que l'école Microsoft-IA By Simplon ?", "Que proposez-vous ?", "Quelles sont les valeurs de l'école ?", "Quand a été créée l'école ?"],
+    {"tag":"school1", 
+        "patterns":["Quel genre d'école est-ce ?","Qu'est-ce que l'école Microsoft-IA By Simplon ?", "Que proposez-vous ?", "Quelles sont les valeurs de l'école ?", "Quand a été créé l'école ?"],
         "responses":["L’école Microsoft IA est une école qui a été créé en 2018 en partenariat avec Simplon. Elle a fêté ses 3 ans en avril 2021.\nLe Réseau des Fabriques Simplon.co compte en France et à l’international plus de 100 Fabriques inclusives qui partagent des valeurs, une méthode et le même objectif : l’insertion professionnelle de talents sur des métiers techniques du numérique."],
         "context":[""]
     },
@@ -34,11 +34,17 @@
         "responses":["Aujourd’hui, ce sont plus de 500 apprenants qui ont été formés, 24 écoles sur le territoire français réparties sur 9 régions, et 110 partenaires à nos côtés. "],
         "context":[""]
     },
-    {"tag":"program",
+    {"tag":"program1",
     "patterns":["Quel est le contenu pédagogique ?","Quel est le programme ?","Que va-t-on apprendre ?","Que fait-on en cours ?"],
     "responses":["Le contenu pédagogique est élaboré par des experts IA et développeurs Microsoft en partenariat avec Simplon, autour de 5 champs de compétences : \n - La préparation et le traitement des données,  \n - Les API cognitives, \n - Le développement IA,\n - L’interfaçage et la production, \n - Les « soft skills »."],
     "context":[""]
     },
+    {"tag":"program2",
+    "patterns":["quel est le format des cours? comment sont donné les cours?"],
+    "responses":["Les méthodes de formation mise en pratique par Simplon: \n - La pédagogie active et dynamique de projet; \n - Le droit au tâtonnement et à l'erreur, l'apprentissage par le projet, co-apprentissage et reverse mentoring; \n - Les apprenants prennent temporairement le rôle de formateurs; \n - La pédagogie active Simplon est au coeur du projet pour permettre, au-delà des apprentissages techniques, de développer des compétences transversales afin de sécuriser les parcours professionnels."],
+    "context":[""]
+    },
+
     {"tag":"evaluation",
     "patterns":["Quelles sont les conditions à remplir pour obtenir le diplôme ?","Comment se passent les examens ?","Y'a t'il des examens ?","Comment est-on évalué ?","Est-ce qu'il y a des contrôles ?"],
     "responses":["L'évaluation finale des compétences de l'apprenant est basée sur : \n - La réalisation d'un chef d'œuvre : projet de l'apprenant, attestant de la maîtrise de l'ensemble des compétences visées, \n - Certification professionnelle Microsoft (DP100) passée au terme de la période de formation intensive,  \n - Une soutenance devant un jury de professionnels."],
@@ -55,8 +61,8 @@
     "context":[""]
     },
     {"tag":"interviews1",
-    "patterns":["Comment se passent les entretiens ?","Comment sont départagées les candidatures ?", "Qui sont les meilleurs candidats ?", "Qui a le plus de chances d'être admis ?", "Quel est le profil des candidats ?"],
-    "responses":[""],
+    "patterns":["Comment se passent les entretiens ?","Comment sont départagées les candidatures ?", "Qui sont les meilleurs candidats ?", "Qui a le plus de chances d'être admis ?", "Quel est le profil des candidats ?", "Les prfils recherchés?", "Ce que nous recherchons?"],
+    "responses":["De la curiosité, de la créativité, une bonne expression à l’oral et à l’écrit, une représentation claire du métier… et bien sûr, l’envie de s’engager dans une formation intense !"],
     "context":[""]
     },
     {"tag":"degree",
@@ -78,6 +84,26 @@
     "patterns":["Comment vous contacter ?","Comment vous envoyer un message ?", "Quel est votre numéro de téléphone ?", "Comment avoir de meilleures réponses à mes questions ?","école"],
     "responses":["Vous pouvez nous envoyer un message via le lien suivant : https://simplon.co/contact.html"],
     "context":[""]
+    },
+    {"tag":"duration",
+    "patterns":["Quelle est la durée de la formation?"],
+    "responses":["La formation se déroulera sur 19 mois. Elle s'articulera autour d'une période intensive de 7 mois pendant laquelle l'apprenant·e sera confronté·e à des mises en situation concrètes via des projets individuels et en groupes. Elle sera suivie de 12 mois en alternance dans des entreprises partenaires."],
+    "context":[""]
+    },
+    {"tag":"alternance",
+    "patterns":["Comment se passe l'alternance?"],
+    "responses":["Microsoft, Simplon et l’ISEN ont fait le choix d’une participation active de l’entreprise dans la professionnalisation des apprenant.e.s et ce à chaque étape du parcours de formation (sourcing, use case, découverte du monde de l’entreprise, partage d’expérience,…)."],
+    "context":[""]
+    },
+    {"tag":"candidate",
+    "patterns":["Qui peut candidater ?"],
+    "responses":["Critères de candidature : \n - Être inscrit.e comme demandeur d'emploi à Pôle Emploi (OBLIGATOIRE) \n - Réelle appétence pour les chiffres, les statistiques et la donnée \n - Très forte motivation éprouvée et quantifiée par l’apprentissage du code \n - Goût du travail en équipe\n - Faculté d’adaptation aux évolutions et aux environnements nouveaux et complexes \n - Faculté à travailler en autonomie\n - Patience, persévérance, détermination, débrouillardise, rigueur \n - Connaissances élémentaires en langage de programmation \n - Aptitudes en mathématiques (algorithmes et algèbre) \n - Maintien d’une veille technologique régulière \n - Notions sur la big data et les API \n - Anglais écrit et lu (niveau intermédiaire - B2)"],
+    "context":[""]
+    },
+    {"tag":"dev",
+        "patterns":["Quel est le rôle du développeur.se Data IA ?"],
+        "responses":["Son rôle est de développer des solutions informatiques utilisables par des spécialistes et des non-spécialistes, intégrant directement ou indirectement des briques d’Intelligence Artificielle (ex : algorithmes de Machine Learning)."],
+        "context":[""]
     }
 ]
 }
