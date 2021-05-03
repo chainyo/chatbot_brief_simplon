@@ -31,7 +31,6 @@
 
 <script>
 import MessageLayout from '@/components/MessageLayout'
-import * as tf from '@tensorflow/tfjs'
 import axios from 'axios'
 
 export default {
@@ -47,29 +46,30 @@ export default {
     }
   },
   mounted () {
-    let that = this;
 
     async function loadModel() {
-      that.model = await tf.loadLayersModel('@/model.json');
-      that.modelReady = true;
-      that.predictedValue = 'Ready for making predictions';
+      const tf = require("@tensorflow/tfjs");
+      const tfn = require("@tensorflow/tfjs-node");
+      const handler = tfn.io.fileSystem("@/tfjsmodel/model.json");
+      const model = await tf.loadLayersModel(handler);
+      console.log("Model loaded")
+      console.log(model.summary)
     }
     loadModel();
   },
   methods: {
     sendMessageUser () {
-      storedInput = this.input
+      const storedInput = this.input
       this.allMessages.push({content:this.input, class:'user-message', id:this.allMessages.length})
       this.input = null
-      prediction = this.predictValue(storedInput)
+      this.predictedTag = this.predict(storedInput)
       console.log(prediction)
     },
     sendMessageBot (answer) {
       this.allMessages.push({content:answer, class:'bot-message', id:this.allMessages.length})
     },
-    predict() {
-      this.predictedTag = this.predictValue([this.input]);
-      console.log(this.predictedValue);
+    predict(input) {
+      return this.predictValue(input);
     },
     predictValue(input) {
       const preprocessing = axios.get(`http://api:8081/api/v1/stemming?${input}`)

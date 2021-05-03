@@ -32,4 +32,7 @@ async def find_one(tag):
 
 @app.get("/api/v1/stemming", tags=['Preprocessing'])
 async def get_stemming(input):
-    return {'data': Preprocessing.clean_sentences(input)}
+    clean = Preprocessing.clean_sentences(input)
+    bag = Preprocessing.bag_of_words(clean)
+    return {'data': bag}
+    
