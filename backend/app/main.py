@@ -42,6 +42,6 @@ async def get_model():
         model = load(f)
     return model
 
-@app.get("/api/v1/group1-shard1of1.bin", include_in_schema=False)
+@app.get("/api/v1/group1-shard1of1.bin", tags=['Model'])
 async def get_shards():
-    return FileResponse(path="/app/model/tfjsmodel/group1-shard1of1.bin")
+    return FileResponse(path="./app/model/tfjsmodel/group1-shard1of1.bin")
