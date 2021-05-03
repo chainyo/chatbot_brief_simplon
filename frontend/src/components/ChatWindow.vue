@@ -58,8 +58,11 @@ export default {
   },
   methods: {
     sendMessageUser () {
+      storedInput = this.input
       this.allMessages.push({content:this.input, class:'user-message', id:this.allMessages.length})
       this.input = null
+      prediction = this.predictValue(storedInput)
+      console.log(prediction)
     },
     sendMessageBot (answer) {
       this.allMessages.push({content:answer, class:'bot-message', id:this.allMessages.length})
@@ -69,7 +72,7 @@ export default {
       console.log(this.predictedValue);
     },
     predictValue(input) {
-      const preprocessing = axios.get(`http://localhost:8080/api/v1/stemming?${input}`)
+      const preprocessing = axios.get(`http://api:8081/api/v1/stemming?${input}`)
       const prediction = this.model.predict(preprocessing.data);
       return prediction
     }

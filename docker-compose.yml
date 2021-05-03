@@ -4,7 +4,7 @@ services:
     api:
         image: api:1.0
         build:
-            context: ./backend/api
+            context: ./backend/app
             dockerfile: Dockerfile
         restart: unless-stopped
         container_name: api
