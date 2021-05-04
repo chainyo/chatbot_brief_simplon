@@ -67,8 +67,6 @@ Epoch 500/500
 
 ## 4. Conversion du modèle Keras vers TensorFlow.js
 
-On installe tensorflowjs via la commande `pip install tensorflowjs` ensuite on importe tensorflow: `import tensorflowjs as tfjs`; enfin on convertit notre modèle keras vers tensorflow.js : `tfjs.converters.save_keras_model(model, "chatbot_brief_simplon/model/model/tfjsmodel")`
-
 ### Coté Python
 Installer TensorflowJS pour python `pip install tensorflowjs`
 
