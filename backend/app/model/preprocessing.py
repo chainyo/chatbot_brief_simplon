@@ -31,7 +31,7 @@ class Preprocessing():
     def clean_sentences(cls, sentence):
         cls.new_sentence = []
         #je tokenise le pattern et split les mots en array
-        cls.sentences_words = nltk.word_tokenize(sentence)
+        cls.sentences_words = nltk.word_tokenize(sentence.item_content)
         for word in cls.sentences_words:
             cls.new_sentence.extend(cls.preprocess_word(word))
         #Je réduis chaque mot à sa forme de base

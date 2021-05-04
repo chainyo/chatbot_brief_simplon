@@ -5,9 +5,9 @@
             <el-scrollbar max-height="500px">
                 <MessageLayout 
                   v-for="message in allMessages" 
-                  :key="message.id" 
-                  :message="message.content" 
-                  :msgClass="message.class" />
+                  :key="message.item_id" 
+                  :message="message.item_content" 
+                  :msgClass="message.item_class" />
             </el-scrollbar>
           </div>
       </div>
@@ -44,7 +44,7 @@ export default {
       allMessages: [],
       botAnswer: null,
       predictedTag: null,
-      storedInput: null,
+      lastItemId: null
     }
   },
   mounted () {
@@ -57,19 +57,24 @@ export default {
   },
   methods: {
     sendMessageUser () {
-      this.storedInput = this.input
-      this.allMessages.push({content:this.storedInput, class:'user-message', id:this.allMessages.length})
+      this.lastItemId = this.allMessages.length
+      this.allMessages.push({item_content:this.input, item_class:'user-message', item_id:this.lastItemId})
       this.input = null
-      this.predictValue(this.storedInput)
+      this.predictValue(this.allMessages.find(x => x.item_id === this.lastItemId))
     },
     sendMessageBot (answer) {
-      this.allMessages.push({content:answer, class:'bot-message', id:this.allMessages.length})
+      this.allMessages.push({item_content:answer, item_class:'bot-message', item_id:this.allMessages.length})
     },
     predictValue(input) {
       axios
-        .get(`http://localhost:8081/api/v1/stemming?${input}`)
-        .then(response => (this.predictedTag = response))
-        .then(console.log(this.predictedTag))
+        .post('http://localhost:8081/api/v1/stemming', {
+          item_content: input.item_content,
+          item_class: input.item_class,
+          item_id: input.item_id
+        })
+        .then(function(response) {
+          this.model.predict(tf.tensor(response.data.data));
+        })
     }
   },
   computed: {

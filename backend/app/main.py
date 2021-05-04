@@ -3,9 +3,17 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from starlette.responses import RedirectResponse
 from json import load
+from pydantic import BaseModel
 
 from app.query import DB
 from app.model.preprocessing import Preprocessing
+
+import urllib.parse
+
+class StemmingItem(BaseModel):
+    item_content: str
+    item_class: str
+    item_id: int
 
 app = FastAPI(
     title="API ChatBot Brief Simplon",
@@ -32,9 +40,9 @@ async def find_one(tag):
     response = await DB.find_answer(tag)
     return response
 
-@app.get("/api/v1/stemming", tags=['Preprocessing'])
-async def get_stemming(input):
-    return {'data': Preprocessing.bag_of_words(str(input))}
+@app.post("/api/v1/stemming", tags=['Preprocessing'])
+async def get_stemming(input: StemmingItem):
+    return {'data': Preprocessing.bag_of_words(input)}
 
 @app.get("/api/v1/model", tags=['Model'])
 async def get_model():
