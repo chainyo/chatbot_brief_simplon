@@ -20,7 +20,7 @@
     "context": [""]
     },
     {"tag": "noanswer",
-    "patterns": [],
+    "patterns": [""],
     "responses": ["Désolé, je n'ai pas compris."],
     "context": [""]
     },
