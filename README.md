@@ -50,20 +50,24 @@ MongoDB est un des leaders des bases de données non-relationnelles, comme celle
 Avant  d'entraîner le model, le corpus qui constitue notre dataset pour l'entraînement est passé par plusieurs étapes de traitement:
 - La tokenisation
 - la suppression des stopwords et caractère spéciaux
-- la lemmatisation plutôt que la méthode du stemming word car on obtennait de moins bons résultats avec cette dernière lors des tests du modèle.
+- la lemmatisation p
 
 Une fois cela fait, nous avons crée notre vocabulaire ou liste de mots, notre liste de classes et notre document contenant les différentes questions ou patterns par classe.
 
-Pour l'entraînement un ann a été mis en place contenant une couche de 256 neuronnes, et une deuxième de 128 neuronnes et une troisième ayant un nombre de neuronnes équivalent au nombre de classes à prédire de notre dataset. L'optimiseur Stochastic gradient descent avec Nesterov accelerated gradient a été choisis pour ce modèle car on obtient de bons resultats, l'entraînement se fait sur 500 epochs 
 ### Choix techniques
+On a choisit la lemmatisation plutôt que la méthode du stemming word car on obtennait de moins bons résultats avec cette dernière lors des tests du modèle.
+Pour l'entraînement un ann a été mis en place contenant une couche de 256 neuronnes, et une deuxième de 128 neuronnes et une troisième ayant un nombre de neuronnes équivalent au nombre de classes à prédire de notre dataset. L'optimiseur Stochastic gradient descent avec Nesterov accelerated gradient a été choisis pour ce modèle car on obtient de bons resultats, l'entraînement se fait sur 500 epochs 
 
 ### Résultats
 
+Epoch 500/500
+13/13 [==============================] - 0s 11ms/step - loss: 0.0886 - accuracy: 0.9533 - val_loss: 3.6166 - val_accuracy: 0.5625
 
 <hr>
 
 ## 4. Conversion du modèle Keras vers TensorFlow.js
 
+On installe tensorflowjs via la commande `pip install tensorflowjs` ensuite on importe tensorflow: `import tensorflowjs as tfjs`; enfin on convertit notre modèle keras vers tensorflow.js : `tfjs.converters.save_keras_model(model, "chatbot_brief_simplon/model/model/tfjsmodel")`
 
 ### Coté Python
 Installer TensorflowJS pour python `pip install tensorflowjs`
