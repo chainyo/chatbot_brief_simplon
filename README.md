@@ -50,13 +50,13 @@ MongoDB est un des leaders des bases de données non-relationnelles, comme celle
 Avant  d'entraîner le model, le corpus qui constitue notre dataset pour l'entraînement est passé par plusieurs étapes de traitement:
 - La tokenisation
 - la suppression des stopwords et caractère spéciaux
-- la lemmatisation p
+- la lemmatisation 
 
 Une fois cela fait, nous avons crée notre vocabulaire ou liste de mots, notre liste de classes et notre document contenant les différentes questions ou patterns par classe.
 
 ### Choix techniques
 On a choisit la lemmatisation plutôt que la méthode du stemming word car on obtennait de moins bons résultats avec cette dernière lors des tests du modèle.
-Pour l'entraînement un ann a été mis en place contenant une couche de 256 neuronnes, et une deuxième de 128 neuronnes et une troisième ayant un nombre de neuronnes équivalent au nombre de classes à prédire de notre dataset. L'optimiseur Stochastic gradient descent avec Nesterov accelerated gradient a été choisis pour ce modèle car on obtient de bons resultats, l'entraînement se fait sur 500 epochs 
+Pour l'entraînement un ann a été mis en place contenant une couche de 256 neuronnes, et une deuxième de 128 neuronnes et une troisième ayant un nombre de neuronnes équivalent au nombre de classes à prédire de notre dataset. L'optimiseur Stochastic gradient descent avec Nesterov accelerated gradient a été choisis pour ce modèle car on obtient de bons resultats, l'entraînement se fait sur 500 epochs avec un batch_size = 5
 
 ### Résultats
 
