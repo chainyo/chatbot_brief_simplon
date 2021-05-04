@@ -20,3 +20,4 @@ services:
         container_name: vue
         ports:
             - 8080:8080
+        

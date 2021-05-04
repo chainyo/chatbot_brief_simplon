@@ -58,29 +58,3 @@ class Preprocessing():
     def read_file(cls, file_name):
         with open(f'./app/model/ressources/obj/{file_name}.pkl', 'rb') as f:
             return pickle.load(f)
-
-    # def predict(self,sentence):
-    #     #seuil de prediction
-    #     p = bot.bag_of_words(self,sentence,words_list,show_details=False)
-    #     print(p.shape)
-    #     res = model.predict(np.array([p]))[0]
-    #     ERROR_THRESHOLD = 0.2
-    #     results = [[i,r] for i,r in enumerate(res) if r> ERROR_THRESHOLD]
-    #     #probabilité de force de tri
-    #     results.sort(key=lambda x: x[1],reverse=True)
-    #     return_list = []
-    #     [return_list.append({"intents":classes[r[0]], "probabilty":str([r[1]])}) for r in results]
-    #     return return_list
-
-    # def get_reponse(self,ints):
-
-    #     tag = ints[0]['intents']
-    #     list_of_intents = intents_files['intents']
-    #     for i in list_of_intents:
-    #         if(i['tag'] == tag):
-    #             result = random.choice(i['responses'])
-    #             print(ints)
-    #             print("classe correspondante:",tag)
-    #             print(result)
-    #             break
-    #     return result

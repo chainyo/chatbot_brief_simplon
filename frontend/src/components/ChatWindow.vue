@@ -31,6 +31,7 @@
 
 <script>
 import MessageLayout from '@/components/MessageLayout'
+import * as tf from '@tensorflow/tfjs'
 import axios from 'axios'
 
 export default {
@@ -43,32 +44,32 @@ export default {
       allMessages: [],
       botAnswer: null,
       predictedTag: null,
+      storedInput: null,
     }
   },
   mounted () {
+    let that = this;
     async function loadModel() {
-      const tf = require("@tensorflow/tfjs");
-      const model = await tf.loadLayersModel('http://localhost:8081/api/v1/model');
+      that.model = await tf.loadLayersModel('http://localhost:8081/api/v1/model');
       console.log("Model loaded")
-      console.log(model.summary)
     }
     loadModel();
   },
   methods: {
     sendMessageUser () {
-      const storedInput = this.input
-      this.allMessages.push({content:this.input, class:'user-message', id:this.allMessages.length})
+      this.storedInput = this.input
+      this.allMessages.push({content:this.storedInput, class:'user-message', id:this.allMessages.length})
       this.input = null
-      this.predictedTag = this.predictValue(storedInput)
-      console.log(this.predictedTag)
+      this.predictValue(this.storedInput)
     },
     sendMessageBot (answer) {
       this.allMessages.push({content:answer, class:'bot-message', id:this.allMessages.length})
     },
     predictValue(input) {
-      const preprocessing = axios.get(`http://api:8081/api/v1/stemming?${input}`)
-      const prediction = this.model.predict(preprocessing.data);
-      return prediction
+      axios
+        .get(`http://localhost:8081/api/v1/stemming?${input}`)
+        .then(response => (this.predictedTag = response))
+        .then(console.log(this.predictedTag))
     }
   },
   computed: {

@@ -34,7 +34,7 @@ async def find_one(tag):
 
 @app.get("/api/v1/stemming", tags=['Preprocessing'])
 async def get_stemming(input):
-    return {'data': Preprocessing.bag_of_words(input)}
+    return {'data': Preprocessing.bag_of_words(str(input))}
 
 @app.get("/api/v1/model", tags=['Model'])
 async def get_model():
