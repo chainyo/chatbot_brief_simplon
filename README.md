@@ -141,7 +141,7 @@ services:
         ports:
             - 8080:8080
 ```
-Le docker-compose créé deux images sur Docker.
+Le docker-compose crée deux images sur Docker.
 La première, api, contien l'API du Back-end, et la deuxième,Vue, cotient le front-end.
 
 * Dépendances:
