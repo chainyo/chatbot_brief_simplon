@@ -111,7 +111,8 @@ docker-compose up
 ```
 
 Une fois les deux containers lancés. Pour lancer l'api, il suffit de saisir cette adresse dans le navigateur : http://127.0.0.1:8081/
-
+- Résultat:
+![image.png](/images/api.png)
 Pour lancer la page web contenant le chatbot il faudrait saisir cette adresse dans le navigateur: http://127.0.0.1:8080/
 
 * Le fichier Docker-compose:
