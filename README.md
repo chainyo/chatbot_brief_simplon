@@ -40,8 +40,25 @@ Pour chaque situation sont définies :
 ### Stockage de la BDD sur MongoDB Atlas
 
 MongoDB est un des leaders des bases de données non-relationnelles, comme celle que nous avons à gérer dans ce projet. 
-... TO BE CONTINUED...
 
+La base de données est hébergée sur MongoDB Atlas et l’accès à celle-ci se fait grâce au module ```Python motor```.
+```
+import motor.motor_asyncio
+from model import Todo
+
+client = motor.motor_asyncio.AsyncIOMotorClient("mongodb+srv://TJLL:M3G4H377ABot@chatbotcluster.zblke.mongodb.net/?retryWrites=true&w=majority")
+db = client['ChatDB']
+
+async def find_answer(tag):
+    data = await db.intents.find_one({"tag": tag}, {'_id': 0})
+    return data
+```
+
+Dans la formulation de la requête nous utilisons ```async```. Avec le traitement asynchrone, on peut exécuter les taches en parallèle sans trop de tracas tout en manipulant des threads ou des processus. La ```asynch``` a ses limites et ses risques, mais pour les cas simples, il fait le travail. 
+
+Async / await sera très utile dans les cas où de nombreuses opérations d'Entrée / Sortie sont impliquées.
+
+AsyncIOMotorClient représente un processus mongod. Vous créez explicitement l'un de ces objets client, vous le connectez à un ou plusieurs mongods en cours d'exécution et vous l'utilisez pendant toute la durée de vie de votre application.
 
 <hr>
 
@@ -149,6 +166,7 @@ La première ```api``` contient l'API du Back-end, et la deuxième ```vue``` cot
 ![image.png](./images/container.png)
 
 * Dépendances:
+
 Le fichier Requirements.txt contient les librairies et modules utils.
 ```bash
     fastapi
@@ -159,6 +177,16 @@ Le fichier Requirements.txt contient les librairies et modules utils.
     nltk
     aiofiles
 ```
+- Uvicorn est un serveur "ASGI" ultra-rapide. Il exécute du code Web Python asynchrone en un seul processus.
+-Gunicorn Vous pouvez utiliser Gunicorn pour gérer Uvicorn et exécuter plusieurs de ces processus simultanés. De cette façon, vous obtenez le meilleur de la concurrence et du parallélisme.
+
+* Dockerfile:
+
+Le fichier Dockerfile nous permet de préparer la mise en contenaire de l’API.
+L’image Docker avec Uvicorn gérée par Gunicorn pour les applications Web FastAPI permet des performances non négligeables en Python 3.7.
+Plus d’informations sur les liens suivant :
+GitHub repo : https://github.com/tiangolo/uvicorn-gunicorn-fastapi-docker
+Docker Hub image : https://hub.docker.com/r/tiangolo/uvicorn-gunicorn-fastapi/
 
 <hr>
 
