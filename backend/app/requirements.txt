@@ -1,7 +1,0 @@
-fastapi
-uvicorn
-motor
-dnspython
-numpy
-nltk
-aiofiles
