@@ -141,8 +141,12 @@ services:
         ports:
             - 8080:8080
 ```
-Le docker-compose crée deux images sur Docker.
+Le docker-compose crée deux images sur Docker, ainsi que deux containers.
 La première ```api``` contient l'API du Back-end, et la deuxième ```vue``` cotient le front-end.
+
+![image.png](./images/images.png)
+
+![image.png](./images/container.png)
 
 * Dépendances:
 Le fichier Requirements.txt contient les librairies et modules utils.
