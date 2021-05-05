@@ -86,15 +86,35 @@ export default {
 </script>
 
 <style>
-#send-btn {
-    margin-left: 15px;
+
+#app {
+
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 0.5em;
+  margin-right: 1em;
+  background-color: #fefefece;
+  border-radius: 15px 15px;
+  padding-top: 1em;
+
 }
 
 #messages-panel {
-    height: 500px;
-    width: 600px;
-    background-color: white;
+    height: 30em;
+    background-color: #fffffff4;
     margin: auto;
+    border-radius: 15px 15px;
+    border:1px solid #bdbdbd;
+}
+
+#chat-window {
+    margin-top:1.5em;
+    margin-bottom:0.5em;
+}
+
+#send-btn {
+    margin-left: 2em;
 }
 
 .el-card.user-message {
@@ -104,6 +124,9 @@ export default {
     margin-right: 10px;
     margin-top: 10px;
     border-radius: 15px 15px;
+    font-family: "Alef", Arial;
+    font-size: 0.9em;
+    
 }
 
 .el-card.bot-message {
@@ -113,5 +136,7 @@ export default {
     margin-left: 10px;
     margin-top: 10px;
     border-radius: 15px 15px;
+    font-family: "Alef", Arial;
+    font-size: 0.9em;
 }
 </style>

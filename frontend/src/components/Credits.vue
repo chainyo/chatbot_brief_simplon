@@ -11,6 +11,10 @@ export default {
 <style>
 .credits {
     text-align: center;
+    margin-top:0.5em;
     color: black;
+    font-family: "Alef", Arial;
+    font-size: 0.7em;
+
 }
 </style>
