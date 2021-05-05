@@ -178,7 +178,7 @@ Le fichier Requirements.txt contient les librairies et modules utils.
     aiofiles
 ```
 - Uvicorn est un serveur "ASGI" ultra-rapide. Il exécute du code Web Python asynchrone en un seul processus.
--Gunicorn Vous pouvez utiliser Gunicorn pour gérer Uvicorn et exécuter plusieurs de ces processus simultanés. De cette façon, vous obtenez le meilleur de la concurrence et du parallélisme.
+- Gunicorn Vous pouvez utiliser Gunicorn pour gérer Uvicorn et exécuter plusieurs de ces processus simultanés. De cette façon, vous obtenez le meilleur de la concurrence et du parallélisme.
 
 * Dockerfile:
 
