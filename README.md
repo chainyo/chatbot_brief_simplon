@@ -184,11 +184,10 @@ Le fichier Requirements.txt contient les librairies et modules utils.
 
 Le fichier Dockerfile nous permet de préparer la mise en contenaire de l’API.
 L’image Docker avec Uvicorn gérée par Gunicorn pour les applications Web FastAPI permet des performances non négligeables en Python 3.7.
-Plus d’informations sur les liens suivant :
-```
-        - GitHub repo : https://github.com/tiangolo/uvicorn-gunicorn-fastapi-docker
-        - Docker Hub image : https://hub.docker.com/r/tiangolo/uvicorn-gunicorn-fastapi/
-```
+Plus d’informations sur les liens suivant :<br>
+        - GitHub repo : https://github.com/tiangolo/uvicorn-gunicorn-fastapi-docker<br>
+        - Docker Hub image : https://hub.docker.com/r/tiangolo/uvicorn-gunicorn-fastapi/<br>
+
 <hr>
 
 ## 6. Interface
