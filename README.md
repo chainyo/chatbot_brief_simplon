@@ -142,7 +142,7 @@ services:
             - 8080:8080
 ```
 Le docker-compose crée deux images sur Docker.
-La première ```api``` contient l'API du Back-end, et la deuxième ```Vue``` cotient le front-end.
+La première ```api``` contient l'API du Back-end, et la deuxième ```vue``` cotient le front-end.
 
 * Dépendances:
 Le fichier Requirements.txt contient les librairies et modules utils.
