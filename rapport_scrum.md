@@ -126,7 +126,7 @@ Pour 4 jours de travail, nous avions retenu un total de 40 points pour le premie
 
 ### Sprint Backlog #2
 
-Pour ce second sprint, compte tenu des résultats du premier et après discussion sur le travail restant, nous choisi de retenir un total de 35 points à réaliser (au lieu de 32).
+Pour ce second sprint, compte tenu des résultats du premier, du temps restant (3,5j) et après discussion sur le travail restant, nous choisi de retenir un total de 32 points à réaliser.
 
 Les User Stories retenues pour ce second sprint sont les suivantes :
 
@@ -139,13 +139,17 @@ Je veux que mon projet soit accessible de partout | Général | 5 | En cours
 Je veux que mes services soient déployables facilement (Docker) | Général | 5 | En cours
 Je veux rendre compte de mes choix techniques | Général | 5| En cours
 Je veux rendre compte de l'application de ma méthodologie scrum | Général |5| En cours
-Je veux une api qui gère les codes erreurs NON PRIORITAIRE | API | 3 | En cours
 Je veux une api qui gère l'async | API | 1 | En cours
 
 
 <br>
 
 ### Sprint Review #2
+
+Un point de blocage important dès le deuxième jours du sprint nous a fait prendre du retard sur le planning. Ce bloquage était principalement dû à nos faibles connaissances en développement Frontend, et bien que la totalité de l'équipe ait été mobilisée sur le problème, nous n'avons pas pu le résoudre sans aide extérieure dans des délais raisonnables. <br>
+La résolution est intervenue en fin de journée grâce à l'aide d'un formateur.
+
+
 
 <br>
 
