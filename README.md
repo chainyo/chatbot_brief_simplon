@@ -44,9 +44,9 @@ MongoDB est un des leaders des bases de données non-relationnelles, comme celle
 La base de données est hébergée sur MongoDB Atlas et l’accès à celle-ci se fait grâce au module ```Python motor```.
 ```
 import motor.motor_asyncio
-from model import Todo
+from model import Todo                                          <username>:<password>@<cluster-url>/test?
 
-client = motor.motor_asyncio.AsyncIOMotorClient("mongodb+srv://TJLL:M3G4H377ABot@chatbotcluster.zblke.mongodb.net/?retryWrites=true&w=majority")
+client = motor.motor_asyncio.AsyncIOMotorClient("mongodb+srv://<username>:<password>@<cluster-url>/?retryWrites=true&w=majority")
 db = client['ChatDB']
 
 async def find_answer(tag):
