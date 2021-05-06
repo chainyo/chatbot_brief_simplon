@@ -200,7 +200,7 @@ L’interface web est réalisée en Html5, CSS3 et Vue.js3.<br>
 L’interface comprend la fenêtre du chat à travers laquelle l'étudiant ou le partenaire social peut avoir une réponse à ses questionnements.  
 ![image](./images/isen.png)
 
-Quand vous utilisez Vue, nous vous recommandons également d’installer Vue Devtools dans votre navigateur. Cela vous permettra d’inspecter et de déboguer vos applications Vue dans une interface dédiée et intuitive.
+Nous vous recommandons également d’installer Vue Devtools dans votre navigateur. Cela vous permettra d’inspecter et de déboguer vos applications Vue dans une interface dédiée et intuitive.
 
 Pour tester le Frontend vous avez besoin d’installer npm.<br>
 Pour ce faire, lancez dans un terminal la commande : ```npm install```<br>
