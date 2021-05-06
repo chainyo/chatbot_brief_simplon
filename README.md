@@ -196,3 +196,8 @@ Plus d’informations sur les liens suivant :<br>
 
 ## 7. Déploiement
 
+<hr>
+
+## 8. Bilan
+
+Ce projet nous a permis de : => Liste de mentée en compétences :-)
