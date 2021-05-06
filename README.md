@@ -209,4 +209,4 @@ L’étape suivante consiste à compiler et recharger à chaud pour le développ
 
 ## 8. Bilan
 
-Ce projet nous a permis de : => Liste de mentée en compétences :-)
+Ce projet nous a permis de : => Liste de montée en compétences :-)
