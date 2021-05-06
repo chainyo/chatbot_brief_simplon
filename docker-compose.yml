@@ -19,12 +19,13 @@ services:
         restart: unless-stopped
         container_name: vue
         ports:
-            - 8080:8080
+            - 8082:8082
 
     reverse-proxy:
         image: nginx
         volumes:
             - ./nginx.conf:/etc/nginx/nginx.conf
+        container_name: proxy
         ports:
             - 80:80
         
