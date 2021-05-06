@@ -47,21 +47,15 @@ export default {
       lastItemId: null,
       tensor: [],
       allTags: {
-        0:"admission1",
-        1:"admission2",
-        2:"contact",
-        3:"credentials",
-        4:"degree",
-        5:"evaluation",
-        6:"goodbye",
-        7:"howareyou",
-        8:"interviews1",
-        9:"price",
-        10:"program",
-        11:"salutations",
-        12:"school1",
-        13:"school2",
-        14:"thanks"}
+        0:'admission1',1:'admission2',2:'alternance',
+        3:'candidate',4:'contact',5:'credentials',
+        6:'degree',7:'dev',8:'duration',
+        9:'evaluation',10:'format',11:'goodbye',
+        12:'howareyou',13:'interviews1',14:'noanswer',
+        15:'price',16:'program1',17:'program2',
+        18:'public',19:'salutations',20:'school1',
+        21:'school2',22:'thanks'
+      },
     }
   },
   methods: {
