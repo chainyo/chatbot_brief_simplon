@@ -192,7 +192,8 @@ Plus d’informations sur les liens suivant :<br>
 
 ## 6. Interface
 
-L’interface web est réalisée en Html5, CSS3 et Vue.js3.<br>
+L’interface web est réalisée en Html5, CSS3 et Vue.js3.<br><br>
+
 ![image](./images/html.png)<br>
 
 L’interface comprend la fenêtre de chat qui à travers .  
