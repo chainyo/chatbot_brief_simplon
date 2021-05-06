@@ -114,7 +114,7 @@
     },
     {
     "tag": "public",
-	"patterns": ["Qui est l'école? ", "À qui est la formation? ", "Qui est la condition? ", "Qui est la formation? "],
+	"patterns": ["À qui est destinée la formation? ", "Qui peut accéder à la formation? ", "A qui est destinée la formation? "],
     "responses": ["La formation est tournée vers un publique éloigné de l’emploi et sous-représentés dans le monde du numerique."],
 	"context": [""]
     }
