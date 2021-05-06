@@ -5,7 +5,7 @@ class DB :
     @classmethod
     def connexion(cls) :
         cls.client = motor.motor_asyncio.AsyncIOMotorClient("mongodb+srv://TJLL:M3G4H377ABot@chatbotcluster.zblke.mongodb.net/?retryWrites=true&w=majority")
-        cls.db = cls.client['ChatDB']
+        cls.db = cls.client['ChatBD']
 
     @classmethod
     async def find_answer(cls, tag):
