@@ -121,7 +121,7 @@ const tag = model.predict(user_question);
 
 * Déploiement:
 
-Lancez le terminal, place-vous à la racine du dossier du projet et saisir la comande suivante:
+Lancez le terminal, placez-vous à la racine du dossier du projet et saisir la comande suivante:
 
 ```bash
 docker-compose up
@@ -192,13 +192,15 @@ Plus d’informations sur les liens suivant :<br>
 
 ## 6. Interface
 
-L’interface web est réalisée en Html5, CSS3 et Vue.js3.<br><br>
+L’interface web est réalisée en Html5, CSS3 et Vue.js3.<br>
 
-![image](./images/html.png)<br>
+![image](./images/html_css.jpg)
+![image](./images/vue.png)
 
-L’interface comprend la fenêtre de chat qui à travers .  
+L’interface comprend la fenêtre du chat à travers laquelle l'étudiant ou le partenaire social peut avoir une réponse à ses questionnements.  
 
-Pour tester le FrontEnd vous avez besoin d’installer npm. Pour ce faire : ```npm install```
+Pour tester le Frontend vous avez besoin d’installer npm. 
+Pour ce faire, lancez dans un terminal la commande : ```npm install```
 L’étape suivante consiste à compiler et recharger à chaud pour le développement
 
 <hr>
@@ -209,4 +211,6 @@ L’étape suivante consiste à compiler et recharger à chaud pour le développ
 
 ## 8. Bilan
 
-Ce projet nous a permis de : => Liste de montée en compétences :-)
+Cette issue a eu vocation à rassembler toutes nos réflexions et discussions sur l'orientation générale du projet d'un Chatbot pour l'école Microsft Brest+.
+
+Le travail collaboratif qu'on a eu l'occasion d'accomplir nous a permis de dépployer nos compétances aquises par le passé et d'en développer des nouvelles.
