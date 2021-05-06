@@ -285,4 +285,4 @@ docker-compose up -d
 Cette issue a eu vocation à rassembler toutes nos réflexions et discussions sur l'orientation générale du projet d'un Chatbot pour l'école Microsft Brest+.
 
 Le travail collaboratif au quotidien nous a donné l'occasion de prouver notre capacité à mettre en oeuvre notre complémentarité. Chacun de nous quatres a su mettre à disposition ses compétences pour faire évoluer le travail du groupe.
-Nous avons égalemet connu des montée en compétence sur différent outils de développements.
+Nous avons égalemet connu des montées en compétences sur différent outils de développements.
