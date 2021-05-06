@@ -67,8 +67,10 @@ export default {
   methods: {
     sendMessageUser () {
       this.lastItemId = this.allMessages.length
-      this.allMessages.push({item_content:this.input, item_class:'user-message', item_id:this.lastItemId})
-      this.predictValue(this.allMessages.find(x => x.item_id === this.lastItemId))
+      if (this.input) {
+        this.allMessages.push({item_content:this.input, item_class:'user-message', item_id:this.lastItemId})
+        this.predictValue(this.allMessages.find(x => x.item_id === this.lastItemId))
+      }
     },
     sendMessageBot (answer) {
       this.allMessages.push({item_content:answer, item_class:'bot-message', item_id:this.allMessages.length})
@@ -81,14 +83,14 @@ export default {
           item_id: input.item_id
         })
         .then(response => (this.tensor = response.data.data))
+      this.input = null
       const model = await tf.loadLayersModel('http://localhost:8081/api/v1/model')
       let prediction = await model.predict(tf.tensor([this.tensor])).argMax(-1).data()
       this.predictedTag = await this.allTags[prediction]
-      axios
+      await axios
         .get(`http://localhost:8081/api/v1/find_one?tag=${this.predictedTag}`)
-        .then(response => (this.botAnswer = response))
-      await console.log(this.botAnswer)
-      this.input = null
+        .then(response => (this.botAnswer = response.data.responses[0]))
+      await this.sendMessageBot(this.botAnswer)
     }
   },
   computed: {
@@ -115,7 +117,7 @@ export default {
 }
 
 #messages-panel {
-    height: 30em;
+    height: 25em;
     background-color: #fffffff4;
     margin: auto;
     border-radius: 15px 15px;
@@ -135,11 +137,12 @@ export default {
     text-align: right;
     background-color: rgba(251,0,51,0.1);
     float: right;
-    margin-right: 10px;
-    margin-top: 10px;
+    margin-right: 1em;
+    margin-top: 1em;
     border-radius: 15px 15px;
     font-family: "Alef", Arial;
     font-size: 0.9em;
+    max-width: 20em;
     
 }
 
@@ -147,10 +150,11 @@ export default {
     text-align: left;
     background-color: rgba(251,0,51,0.5);
     float: left;
-    margin-left: 10px;
-    margin-top: 10px;
+    margin-left: 1em;
+    margin-top: 1em;
     border-radius: 15px 15px;
     font-family: "Alef", Arial;
     font-size: 0.9em;
+    max-width: 20em;
 }
 </style>
