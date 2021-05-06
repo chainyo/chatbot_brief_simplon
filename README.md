@@ -5,7 +5,7 @@
 Ce travail a été réalisé en groupe en utilisant la méthodologie SCRUM.  
 Un rapport détaillé des étapes du projet est disponible : Voir le [rapport SCRUM](rapport_scrum.md).
 
-Nous avons également utilisé le fonctionnalité `Project` de notre répertoire [Github](https://github.com/ChainYo/chatbot_brief_simplon/projects/1) pour gérer nos tâches et la répartition du travail.
+Nous avons également utilisé la fonctionnalité `Project` de notre répertoire [Github](https://github.com/ChainYo/chatbot_brief_simplon/projects/1) pour gérer nos tâches et la répartition du travail.
 <hr>
 
 ## 2. Recueil des données et intégration en base sur MongoDB Atlas
