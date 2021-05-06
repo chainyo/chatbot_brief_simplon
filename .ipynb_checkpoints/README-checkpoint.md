@@ -121,7 +121,7 @@ const tag = model.predict(user_question);
 
 * Déploiement:
 
-Lancez le terminal, placez-vous à la racine du dossier du projet et saisir la comande suivante:
+Lancez le terminal, place-vous à la racine du dossier du projet et saisir la comande suivante:
 
 ```bash
 docker-compose up
@@ -192,13 +192,7 @@ Plus d’informations sur les liens suivant :<br>
 
 ## 6. Interface
 
-
-
 <hr>
 
 ## 7. Déploiement
-
-<hr>
-
-## 8. Conclusion
 
