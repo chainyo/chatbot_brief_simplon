@@ -27,5 +27,5 @@ services:
             - ./nginx.conf:/etc/nginx/nginx.conf
         container_name: proxy
         ports:
-            - 80:80
+            - 8080:8080
         
