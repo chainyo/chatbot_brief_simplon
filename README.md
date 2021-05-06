@@ -211,7 +211,7 @@ L’étape suivante consiste à compiler et recharger le module pour le dévelop
 
 ## 7. Déploiement
 
-Pour industrialiser notre projet, notre chois c'est porté sur AWS-EC2 d'Amazon.
+Pour industrialiser notre projet, notre choix c'est porté sur AWS-EC2 d'Amazon.
 
 <hr>
 
