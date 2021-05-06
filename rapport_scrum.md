@@ -132,14 +132,14 @@ Les User Stories retenues pour ce second sprint sont les suivantes :
 
 User Stories | Epic | Estimation | Terminé jour
 :- |:-:| :-:| -:
-Je veux que mon modèle fonctionne sur Tensorflow.JS | Modèle | 3 | En cours
-Je veux qu'on s'adresse à moi différemment selon mon statut (étudiant ou partenaire) | Interface | 5 | En cours
-Je veux un délai de réponse inférieur à 1s. | Interface | 3 | En cours
-Je veux que mon projet soit accessible de partout | Général | 5 | En cours
-Je veux que mes services soient déployables facilement (Docker) | Général | 5 | En cours
-Je veux rendre compte de mes choix techniques | Général | 5| En cours
-Je veux rendre compte de l'application de ma méthodologie scrum | Général |5| En cours
-Je veux une api qui gère l'async | API | 1 | En cours
+Je veux que mon modèle fonctionne sur Tensorflow.JS | Modèle | 3 | 3
+Je veux qu'on s'adresse à moi différemment selon mon statut (étudiant ou partenaire) | Interface | 5 | Non terminée
+Je veux un délai de réponse inférieur à 1s. | Interface | 3 | 4
+Je veux que mon projet soit accessible de partout | Général | 5 | 2
+Je veux que mes services soient déployables facilement (Docker) | Général | 5 | 2
+Je veux rendre compte de mes choix techniques | Général | 5| 4
+Je veux rendre compte de l'application de ma méthodologie scrum | Général |5| 4
+Je veux une api qui gère l'async | API | 1 | 1
 
 
 <br>
@@ -149,6 +149,10 @@ Je veux une api qui gère l'async | API | 1 | En cours
 Un point de blocage important dès le deuxième jours du sprint nous a fait prendre du retard sur le planning. Ce bloquage était principalement dû à nos faibles connaissances en développement Frontend, et bien que la totalité de l'équipe ait été mobilisée sur le problème, nous n'avons pas pu le résoudre sans aide extérieure dans des délais raisonnables. <br>
 La résolution est intervenue en fin de journée grâce à l'aide d'un formateur.
 
+Un nouveau point blocant est apparu le troisième jour, nous faisant à nouveau prendre un retard considérable sur nos objectifs.
+
+Ces retards cumulés nous ont obligés à revoir nos objectifs pour ce sprint et donc pour la totalité du projet. <br>
+Après concertation lors de la dernière daily scrum, nous avons choisi d'ajourner l'une des fonctionnalités (voir la User Storie "non réalisée" dnas le Sprint Backlog ci dessus), afin de rendre un projet fonctionnel, même si nous ne répondons pas à la totalité du cahier des charges.
 
 
 <br>
@@ -169,7 +173,12 @@ Ce cadre de travail nous a permis de collaborer plus efficacement, de structurer
 Aborder le projet de manière agile nous a permis d'avoir plus de visibilité sur le travail de nos collègues et donc de partager facilement la même vision d'ensemble du produit. <br>
 Le fait de revoir constamment les objectifs et l'avancée du projet (objectifs du jour, objectifs du sprint, etc.) permet d'éviter le stress et les écueils et d'avancer posément. 
 
-Si l'ensemble des user stories que nous avions définies au début du projet n'ont pas été réalisées, nous avons pu prioriser notre travail pour remettre au client un produit fonctionnel dans le temps imparti.<br>
+Si l'ensemble des user stories que nous avions définies au début du projet n'ont pas été réalisées, nous avons pu prioriser notre travail pour remettre au client un produit fonctionnel dans le temps imparti.
+
+La tâches du sprint 2 "non réalisée" et les tâches qui ne sont jamais rentrées dans aucun Sprint Backlog auraient pu être l'objet d'un 3ème sprint. Nous pensons, maintenant que nous avons un projet fonctionnel, que nous aurions pu répondre à l'ensemble des demandes client dans le temps du troisième sprint. <br>
+Notre Product Backlog de départ comptait 133 point au total, dont 90 qui répondaients à des demandes client, et 43 à des options supplémentaires auxquelles nous avions pensé. Nous avion estimé notre force de travail à 40 et 32 points pour les deux premiers sprint, ce qui s'est avéré légèrement surestimé mais cohérent. Addition faite, un troisième sprint nous aurait probablement permis d'atteindre les objectifs clients.
+
+
 Nous avons donc rempli notre contrat, et c'est sans aucun doute grâce aux méthodes agiles que nous avons pu y arriver sereinement.
 <br>
 
