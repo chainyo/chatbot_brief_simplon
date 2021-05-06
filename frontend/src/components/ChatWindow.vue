@@ -46,22 +46,15 @@ export default {
       predictedTag: null,
       lastItemId: null,
       tensor: [],
-      allTags: {
-        0:"admission1",
-        1:"admission2",
-        2:"contact",
-        3:"credentials",
-        4:"degree",
-        5:"evaluation",
-        6:"goodbye",
-        7:"howareyou",
-        8:"interviews1",
-        9:"price",
-        10:"program",
-        11:"salutations",
-        12:"school1",
-        13:"school2",
-        14:"thanks"}
+      allTags: { 
+        0: 'admission1', 1: 'admission2',2: 'alternance',
+        3: 'contact', 4: 'credentials', 5: 'degree',
+        6: 'dev',7: 'duration',8: 'evaluation', 
+        9: 'goodbye', 10: 'howareyou', 11: 'interviews1',
+        12: 'noanswer', 13: 'price',14: 'program1', 
+        15: 'program2', 16: 'public', 17: 'salutations',
+        18: 'school1', 19: 'school2', 20: 'thanks' 
+      }
     }
   },
   methods: {
