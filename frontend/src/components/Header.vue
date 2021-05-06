@@ -4,10 +4,10 @@
       <el-avatar :size="60" :src="circleUrl" :fit="fill"></el-avatar>
     </el-col>
     <el-col :span="5">
-      <el-card shadow="always">Simplon</el-card>
+      <el-card shadow="always"><a href="https://simplon.co">Simplon</a></el-card>
     </el-col>
     <el-col :span="5">
-      <el-card shadow="always">Github</el-card>
+      <el-card shadow="always"><a href="https://github.com/ChainYo/chatbot_brief_simplon">Github</a></el-card>
     </el-col>
   </el-row>
 </template>
@@ -59,8 +59,17 @@ export default {
   padding:0.5em;
 }
 .el-col.el-col-5 {
-  min-width: 12em;
+  min-width: 10em;
   padding:0.5em;
 }
-
+a:link {
+  outline: none;
+  text-decoration: none;
+  color: #eee
+}
+a:visited {
+  outline: none;
+  text-decoration: none;
+  color: #eee
+}
 </style>

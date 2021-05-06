@@ -32,10 +32,5 @@ export default {
 body {
   background-color: #eee;
   background-image: url(../assets/fond.png);
-  background-attachment: fixed;
-  font-family: "Carlito", Arial;
-  font-size: 1em;
-  color:#302535;
-  text-align: center;
 }
 </style>

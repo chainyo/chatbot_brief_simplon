@@ -9,7 +9,6 @@
   },
   "dependencies": {
     "@tensorflow/tfjs": "^3.6.0",
-    "@tensorflow/tfjs-node": "^3.6.1",
     "aws-sdk": "^2.897.0",
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
