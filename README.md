@@ -192,7 +192,7 @@ Plus d’informations sur les liens suivant :<br>
 
 ## 6. Interface
 
-L’interface web est réalisée en Html5, CSS3 et Vue.js3.<br>
+L’interface web est réalisée en Html5, CSS3,JavaScript et Vue.js3.<br>
 
 ![image](./images/html_css.jpg)
 ![image](./images/vue.png)
