@@ -45,14 +45,29 @@ export default {
       botAnswer: null,
       predictedTag: null,
       lastItemId: null,
-      tensor: []
+      tensor: [],
+      allTags: {
+        0:"admission1",
+        1:"admission2",
+        2:"contact",
+        3:"credentials",
+        4:"degree",
+        5:"evaluation",
+        6:"goodbye",
+        7:"howareyou",
+        8:"interviews1",
+        9:"price",
+        10:"program",
+        11:"salutations",
+        12:"school1",
+        13:"school2",
+        14:"thanks"}
     }
   },
   methods: {
     sendMessageUser () {
       this.lastItemId = this.allMessages.length
       this.allMessages.push({item_content:this.input, item_class:'user-message', item_id:this.lastItemId})
-      this.input = null
       this.predictValue(this.allMessages.find(x => x.item_id === this.lastItemId))
     },
     sendMessageBot (answer) {
@@ -67,7 +82,13 @@ export default {
         })
         .then(response => (this.tensor = response.data.data))
       const model = await tf.loadLayersModel('http://localhost:8081/api/v1/model')
-      this.predictedTag = model.predict(tf.tensor([this.tensor]))
+      let prediction = await model.predict(tf.tensor([this.tensor])).argMax(-1).data()
+      this.predictedTag = await this.allTags[prediction]
+      axios
+        .get(`http://localhost:8081/api/v1/find_one?tag=${this.predictedTag}`)
+        .then(response => (this.botAnswer = response))
+      await console.log(this.botAnswer)
+      this.input = null
     }
   },
   computed: {

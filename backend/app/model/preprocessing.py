@@ -11,7 +11,7 @@ class Preprocessing():
     
     @classmethod
     def preprocess_word(cls, word):
-        cls.special_characters = r'[^A-Za-z0-9àéèùêôûâïäëç]+'
+        cls.special_characters = r'[^A-Za-zàéèùêôûâïäëç]+'
         cls.stop_words = set(stopwords.words('french','english')) 
         if word == "'Aujourd','hui'":
             word = word.lower()
