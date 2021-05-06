@@ -192,11 +192,11 @@ Plus d’informations sur les liens suivant :<br>
 
 ## 6. Interface
 
-L’interface web est réalisée en Html5, CSS3 et Vue.js 3.<br>
-![image](./images/html.jpg) 
+L’interface web est réalisée en Html5, CSS3 et Vue.js3.<br>
+![image](./images/html.png) 
 ![image](./images/vue.jpg)<br>
 
-L’interface comprend la fenêtre de chat qui à travers .  
+L’interface comprend la fenêtre de chat à travers laquelle l'étudiant ou le partenaire social.  
 
 Pour tester le FrontEnd vous avez besoin d’installer npm. Pour ce faire : ```npm install```
 L’étape suivante consiste à compiler et recharger à chaud pour le développement
@@ -207,5 +207,8 @@ L’étape suivante consiste à compiler et recharger à chaud pour le développ
 
 <hr>
 
-## 8. Conclusion
+## 8. Bilan
 
+Cette issue a eu vocation à rassembler toutes nos réflexions et discussions sur l'orientation générale du projet d'un Chatbot pour l'école Microsft Brest+.
+
+Le travail collaboratif qu'on a eu 
