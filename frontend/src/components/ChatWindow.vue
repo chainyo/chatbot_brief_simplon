@@ -44,16 +44,9 @@ export default {
       allMessages: [],
       botAnswer: null,
       predictedTag: null,
-      lastItemId: null
+      lastItemId: null,
+      tensor: []
     }
-  },
-  mounted () {
-    let that = this;
-    async function loadModel() {
-      that.model = await tf.loadLayersModel('http://localhost:8081/api/v1/model');
-      console.log("Model loaded")
-    }
-    loadModel();
   },
   methods: {
     sendMessageUser () {
@@ -65,16 +58,16 @@ export default {
     sendMessageBot (answer) {
       this.allMessages.push({item_content:answer, item_class:'bot-message', item_id:this.allMessages.length})
     },
-    predictValue(input) {
+    async predictValue(input) {
       axios
         .post('http://localhost:8081/api/v1/stemming', {
           item_content: input.item_content,
           item_class: input.item_class,
           item_id: input.item_id
         })
-        .then(function(response) {
-          this.model.predict(tf.tensor(response.data.data));
-        })
+        .then(response => (this.tensor = response.data.data))
+      const model = await tf.loadLayersModel('http://localhost:8081/api/v1/model')
+      this.predictedTag = model.predict(tf.tensor([this.tensor]))
     }
   },
   computed: {

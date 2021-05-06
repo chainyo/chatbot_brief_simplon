@@ -101,9 +101,22 @@
     "context":[""]
     },
     {"tag":"dev",
-        "patterns":["Quel est le rôle du développeur.se Data IA ?"],
-        "responses":["Son rôle est de développer des solutions informatiques utilisables par des spécialistes et des non-spécialistes, intégrant directement ou indirectement des briques d’Intelligence Artificielle (ex : algorithmes de Machine Learning)."],
-        "context":[""]
+    "patterns":["Quel est le rôle du développeur.se Data IA ?"],
+    "responses":["Son rôle est de développer des solutions informatiques utilisables par des spécialistes et des non-spécialistes, intégrant directement ou indirectement des briques d’Intelligence Artificielle (ex : algorithmes de Machine Learning)."],
+    "context":[""]
+    },
+    {
+    "tag": "format",
+	"patterns": ["Quels est le format de la formation?", "Quel est la durée de la formation?"],
+    "responses": ["Elle se distingue par son format intensif."],
+	"context": [""]
+     
+    },
+    {
+    "tag": "public",
+	"patterns": ["Qui est l'école? ", "À qui est la formation? ", "Qui est la condition? ", "Qui est la formation? "],
+    "responses": ["La formation est tournée vers un publique éloigné de l’emploi et sous-représentés dans le monde du numerique."],
+	"context": [""]
     }
 ]
 }
