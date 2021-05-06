@@ -192,7 +192,13 @@ Plus d’informations sur les liens suivant :<br>
 
 ## 6. Interface
 
+L’interface web est réalisée en Html5, CSS3 et Vue.js 3.
+![image](./images/html.jpg) ![image](./images/vue.jpg)
 
+L’interface comprend la fenêtre de chat qui à travers .  
+
+Pour tester le FrontEnd vous avez besoin d’installer npm. Pour ce faire : ```npm install```
+L’étape suivante consiste à compiler et recharger à chaud pour le développement
 
 <hr>
 
