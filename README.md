@@ -199,8 +199,8 @@ L’interface web est réalisée en Html5, CSS3 et Vue.js3.<br>
 
 L’interface comprend la fenêtre du chat à travers laquelle l'étudiant ou le partenaire social peut avoir une réponse à ses questionnements.  
 ![image](./images/isen.png)
-Pour tester le Frontend vous avez besoin d’installer npm. 
-Pour ce faire, lancez dans un terminal la commande : ```npm install```
+Pour tester le Frontend vous avez besoin d’installer npm.<br>
+Pour ce faire, lancez dans un terminal la commande : ```npm install```<br>
 L’étape suivante consiste à compiler et recharger à chaud pour le développement
 
 <hr>
