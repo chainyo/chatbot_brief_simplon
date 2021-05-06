@@ -25,7 +25,7 @@
     "context": [""]
     },
     {"tag":"school1", 
-        "patterns":["Quel genre d'école est-ce ?","Qu'est-ce que l'école Microsoft-IA By Simplon ?", "Que proposez-vous ?", "Quelles sont les valeurs de l'école ?", "Quand a été créé l'école ?"],
+        "patterns":["Quel genre d'école est-ce ?","Qu'est-ce que l'école Microsoft-IA By Simplon ?", "Que proposez-vous ?", "Quelles sont les valeurs de l'école ?", "Quand a été créé l'école ?","C'est quoi microsoft_ia?"],
         "responses":["L’école Microsoft IA est une école qui a été créé en 2018 en partenariat avec Simplon. Elle a fêté ses 3 ans en avril 2021.\nLe Réseau des Fabriques Simplon.co compte en France et à l’international plus de 100 Fabriques inclusives qui partagent des valeurs, une méthode et le même objectif : l’insertion professionnelle de talents sur des métiers techniques du numérique."],
         "context":[""]
     },
@@ -46,7 +46,7 @@
     },
 
     {"tag":"evaluation",
-    "patterns":["Quelles sont les conditions à remplir pour obtenir le diplôme ?","Comment se passent les examens ?","Y'a t'il des examens ?","Comment est-on évalué ?","Est-ce qu'il y a des contrôles ?"],
+    "patterns":["Quelles sont les conditions à remplir pour obtenir le diplôme ?","Comment se passent les examens ?","Y'a t'il des examens ?","Comment est-on évalué ?","Est-ce qu'il y a des contrôles ?","Est-ce qu'il y a des examens?"],
     "responses":["L'évaluation finale des compétences de l'apprenant est basée sur : \n - La réalisation d'un chef d'œuvre : projet de l'apprenant, attestant de la maîtrise de l'ensemble des compétences visées, \n - Certification professionnelle Microsoft (DP100) passée au terme de la période de formation intensive,  \n - Une soutenance devant un jury de professionnels."],
     "context":[""]
     },
@@ -76,12 +76,12 @@
     "context":[""]
     },
     {"tag":"price",
-    "patterns":["Combien coûte la formation ?","Quel est le prix de la formation ?", "Combien ça coûte ?", "Comment peut-on financer sa formation ?", "Est-ce gratuit ?", "Est-ce que c'est cher ?"],
+    "patterns":["Combien coûte la formation ?","Quel est le prix de la formation ?", "Combien ça coûte ?", "Comment peut-on financer sa formation ?", "Est-ce gratuit ?", "Est-ce que c'est cher ?","Quel est le tarif?"],
     "responses":["La formation est totalement gratuite pour les bénéficiaires grâce aux entreprises partenaires financeurs de la formation et aux fonds de financement de la formation professionnelle. \nPour les financeurs de la formation professionnelle des demandeurs d'emploi la formation coûte 16€ à 25€ de l'heure selon la qualification visée et l'accompagnement à mobiliser."],
     "context":[""]
     },
     {"tag":"contact",
-    "patterns":["Comment vous contacter ?","Comment vous envoyer un message ?", "Quel est votre numéro de téléphone ?", "Comment avoir de meilleures réponses à mes questions ?","école"],
+    "patterns":["Comment vous contacter ?","Comment vous envoyer un message ?", "Quel est votre numéro de téléphone ?", "Comment avoir de meilleures réponses à mes questions ?"],
     "responses":["Vous pouvez nous envoyer un message via le lien suivant : https://simplon.co/contact.html"],
     "context":[""]
     },
@@ -114,9 +114,9 @@
     },
     {
     "tag": "public",
-	"patterns": ["Qui est l'école? ", "À qui est la formation? ", "Qui est la condition? ", "Qui est la formation? "],
+    "patterns": ["À qui est destinée la formation? ", "Qui peut accéder à la formation? ", "A qui est destinée la formation? "],
     "responses": ["La formation est tournée vers un publique éloigné de l’emploi et sous-représentés dans le monde du numerique."],
-	"context": [""]
+    "context": [""]
     }
 ]
 }
