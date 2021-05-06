@@ -2,7 +2,7 @@
   <div class="main-window">
       <div id="chat-window">
           <div id="messages-panel">
-            <el-scrollbar max-height="500px">
+            <el-scrollbar>
                 <MessageLayout 
                   v-for="message in allMessages" 
                   :key="message.item_id" 
@@ -89,7 +89,7 @@ export default {
       this.predictedTag = await this.allTags[prediction]
       await axios
         .get(`http://localhost:8081/api/v1/find_one?tag=${this.predictedTag}`)
-        .then(response => (this.botAnswer = response.data.responses[0]))
+        .then(response => (this.botAnswer = response.data.responses[Math.floor(Math.random() * response.data.responses.length)]))
       await this.sendMessageBot(this.botAnswer)
     }
   },
@@ -117,7 +117,9 @@ export default {
 }
 
 #messages-panel {
-    height: 25em;
+    min-height: 20em;
+    max-height: 28em;
+    height:24em;
     background-color: #fffffff4;
     margin: auto;
     border-radius: 15px 15px;
@@ -156,5 +158,8 @@ export default {
     font-family: "Alef", Arial;
     font-size: 0.9em;
     max-width: 20em;
+}
+.el-scrollbar__wrap{
+  overflow-y:scroll;
 }
 </style>
