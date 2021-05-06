@@ -201,15 +201,17 @@ L’interface comprend la fenêtre du chat à travers laquelle l'étudiant ou le
 
 ![image](./images/isen.png)
 
-Nous vous recommandons également d’installer Vue Devtools dans votre navigateur ([https://github.com/vuejs/vue-devtools#vue-devtools](Lien)). Cela vous permettra d’inspecter et de déboguer vos applications Vue dans une interface dédiée et intuitive.
+Nous recommandons également d’installer Vue Devtools dans votre navigateur ([https://github.com/vuejs/vue-devtools#vue-devtools](Lien)). Cela vous permettra d’inspecter et de déboguer vos applications ```Vue``` dans une interface dédiée et intuitive.
 
 Pour tester le Frontend vous avez besoin d’installer npm.<br>
 Pour ce faire, lancez dans un terminal la commande : ```npm install```<br>
-L’étape suivante consiste à compiler et recharger à chaud pour le développement avec la commande : ```npm run start```
+L’étape suivante consiste à compiler et recharger le module pour le développement, nous utilisons la commande : ```npm run start```
 
 <hr>
 
 ## 7. Déploiement
+
+Pour industrialiser notre projet, notre chois c'est porté sur AWS-EC2 d'Amazon.
 
 <hr>
 
@@ -217,4 +219,5 @@ L’étape suivante consiste à compiler et recharger à chaud pour le développ
 
 Cette issue a eu vocation à rassembler toutes nos réflexions et discussions sur l'orientation générale du projet d'un Chatbot pour l'école Microsft Brest+.
 
-Le travail collaboratif qu'on a eu 
+Le travail collaboratif au quotidien nous a donné l'occasion de prouver notre capacité à mettre en oeuvre notre complémentarité. Chacun de nous quatres a su mettre à disposition ses compétences pour faire évoluer le travail du groupe.
+Nous avons égalemet connu des montée en compétence sur différent outils de développements.
