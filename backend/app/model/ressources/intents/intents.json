@@ -86,36 +86,24 @@
     "context":[""]
     },
     {"tag":"duration",
-    "patterns":["Quelle est la durée de la formation?"],
-    "responses":["La formation se déroulera sur 19 mois. Elle s'articulera autour d'une période intensive de 7 mois pendant laquelle l'apprenant·e sera confronté·e à des mises en situation concrètes via des projets individuels et en groupes. Elle sera suivie de 12 mois en alternance dans des entreprises partenaires."],
+    "patterns":["Quelle est la durée de la formation?", "Quel est le format de la formation ?", "Combien de temps ça dure ?", "Est-ce une formation intensive ?", "La formation est-elle intense ?", "Est-ce une formation longue ?", "Est-ce une formation courte ?", "combien de temps dure l'alternance ?", "comment se déroule la formation ?"],
+    "responses":["La formation se déroulera sur 19 mois. Cette formation se distingue par son format intensif. Elle s'articulera autour d'une période intensive de 7 mois pendant laquelle l'apprenant·e sera confronté·e à des mises en situation concrètes via des projets individuels et en groupes. Elle sera suivie de 12 mois en alternance dans des entreprises partenaires."],
     "context":[""]
     },
     {"tag":"alternance",
-    "patterns":["Comment se passe l'alternance?"],
+    "patterns":["Comment se passe l'alternance?", "comment les entreprises participen-elles ?", "comment se déroule la période de professionnalisation ?", "L'alternance a-t-elle lieu dnas une entreprise ?", "comment se déroule l'insertion dnas le monde de l'entreprise ?", "la période d'alternance permet-elle de s'insérer dans le monde de l'entreprise ?"],
     "responses":["Microsoft, Simplon et l’ISEN ont fait le choix d’une participation active de l’entreprise dans la professionnalisation des apprenant.e.s et ce à chaque étape du parcours de formation (sourcing, use case, découverte du monde de l’entreprise, partage d’expérience,…)."],
     "context":[""]
     },
-    {"tag":"candidate",
-    "patterns":["Qui peut candidater ?"],
-    "responses":["Critères de candidature : \n - Être inscrit.e comme demandeur d'emploi à Pôle Emploi (OBLIGATOIRE) \n - Réelle appétence pour les chiffres, les statistiques et la donnée \n - Très forte motivation éprouvée et quantifiée par l’apprentissage du code \n - Goût du travail en équipe\n - Faculté d’adaptation aux évolutions et aux environnements nouveaux et complexes \n - Faculté à travailler en autonomie\n - Patience, persévérance, détermination, débrouillardise, rigueur \n - Connaissances élémentaires en langage de programmation \n - Aptitudes en mathématiques (algorithmes et algèbre) \n - Maintien d’une veille technologique régulière \n - Notions sur la big data et les API \n - Anglais écrit et lu (niveau intermédiaire - B2)"],
-    "context":[""]
-    },
     {"tag":"dev",
-    "patterns":["Quel est le rôle du développeur.se Data IA ?"],
-    "responses":["Son rôle est de développer des solutions informatiques utilisables par des spécialistes et des non-spécialistes, intégrant directement ou indirectement des briques d’Intelligence Artificielle (ex : algorithmes de Machine Learning)."],
+    "patterns":["Quel est le rôle du développeur Data IA ?", "qu'est ce qu'un développeur Data IA ?", "que fait un développeur en ia ?", "Que fait un développeur Data ?", "En quoi consiste le travail d'un développeur data ?", "En quoi consistre le travail d'un développeir en intelligence artificielle ?", "que fait un développeur en intelligence artificielle ?"],
+    "responses":["Le rôle du développeur Data IA est de développer des solutions informatiques utilisables par des spécialistes et des non-spécialistes, intégrant directement ou indirectement des briques d’Intelligence Artificielle (ex : algorithmes de Machine Learning)."],
     "context":[""]
-    },
-    {
-    "tag": "format",
-	"patterns": ["Quels est le format de la formation?", "Quel est la durée de la formation?"],
-    "responses": ["Elle se distingue par son format intensif."],
-	"context": [""]
-     
     },
     {
     "tag": "public",
-    "patterns": ["À qui est destinée la formation? ", "Qui peut accéder à la formation? ", "A qui est destinée la formation? "],
-    "responses": ["La formation est tournée vers un publique éloigné de l’emploi et sous-représentés dans le monde du numerique."],
+    "patterns": ["Est-ce une formation inclusive ? ", "Est-ce que vraiment tout le monde peut postuler à cette formation ?", "Les chômeurs peuvent-ils s'inscrire ?", "peut on s'inscrire si on est au chômage ?", "peut-on s'inscrire si on est une femme ?", "peut-on être admis si on est une femme ?", "peut-on être admis si on est éloigné de l'emploi", "peut-on être admis si on a pas travaillé depuis longtemps ?"],
+    "responses": ["La formation est orientée vers les publics éloignés de l’emploi et sous-représentés dans le monde du numérique."],
     "context": [""]
     }
 ]
