@@ -81,7 +81,7 @@
     "context":[""]
     },
     {"tag":"contact",
-    "patterns":["Comment vous contacter ?","Comment vous envoyer un message ?", "Quel est votre numéro de téléphone ?", "Comment avoir de meilleures réponses à mes questions ?","école"],
+    "patterns":["Comment vous contacter ?","Comment vous envoyer un message ?", "Quel est votre numéro de téléphone ?", "Comment avoir de meilleures réponses à mes questions ?"],
     "responses":["Vous pouvez nous envoyer un message via le lien suivant : https://simplon.co/contact.html"],
     "context":[""]
     },
