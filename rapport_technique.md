@@ -116,7 +116,8 @@ L'entraînement se fait sur `500 epochs` avec un `batch_size = 5`.
 
 ```bash
 Epoch 500/500
-13/13 [==============================] - 0s 11ms/step - loss: 0.0886 - accuracy: 0.9533 - val_loss: 3.6166 - val_accuracy: 0.5625
+13/13 [==============================] - 0s 11ms/step - loss: 0.0886 - accuracy: 0.9533 - val_loss: 3.6166 
+- val_accuracy: 0.5625
 ```
 
 <hr>
