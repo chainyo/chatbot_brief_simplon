@@ -13,7 +13,7 @@ class Preprocessing():
     def preprocess_word(cls, word):
         cls.special_characters = r'[^A-Za-zàéèùêôûâïäëç]+'
         cls.stop_words = set(stopwords.words('french','english')) 
-        if word == "'Aujourd','hui'":
+        if word == "Aujourd'hui":
             word = word.lower()
         else:
             word = word.lower().replace("'"," ")
